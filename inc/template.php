@@ -1,8 +1,10 @@
 <?php
+//TODO make a favicon
 abstract class Page {
   final public function render(){
     $output = '<html>' .
       '<head>' .
+      '<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />' .
         '<title>' .
         $this->getTitle() .
         '</title>' .
@@ -18,9 +20,11 @@ abstract class Page {
           '<div id="contents">' .
             '<div id="leftNav">'.
               $this->getLeftNav() .
-            '</div>'. 
+            '</div>'.
             '<div id="pagecontent">' .
               $this->getBody() .
+            '</div>' .
+            '<div id="right">' .
             '</div>' .
           '</div>'.
           '<div id="footer">' .
@@ -53,6 +57,7 @@ abstract class Page {
       //'Footer';
       '';
   }
+
   abstract function getTitle();
   abstract function getScripts();
   abstract function getBody();

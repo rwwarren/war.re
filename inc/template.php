@@ -1,5 +1,5 @@
 <?php
-//TODO make a favicon
+date_default_timezone_set('utc');
 abstract class Page {
   final public function render(){
     $output = '<html>' .
@@ -41,6 +41,7 @@ abstract class Page {
     //TODO MAKE THIS 
     return
       //'This is a header';
+      '<p>ryan warren</p>' .
       '';
   }
 
@@ -55,6 +56,7 @@ abstract class Page {
     //TODO MAKE THIS 
     return
       //'Footer';
+      '<p>&copy ' . date("Y") . ' War.re </p>'.
       '';
   }
 

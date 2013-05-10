@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('UTC');
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 require("$root../../inc/template.php");
 class Home extends Page{
@@ -11,6 +12,7 @@ class Home extends Page{
       return
         '<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>' .
         '<script src="/n/scripts/slider.js"></script>' .
+        '<script src="/n/scripts/jsfiles.js"></script>' .
         '';
     }
 

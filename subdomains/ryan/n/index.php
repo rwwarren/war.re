@@ -214,7 +214,7 @@ li {
           <ul>
             <li>In the process of using a Raspberry Pi and Arduino to create an automated door deadbolt</li>
             <li>Uses Java, Ojective C, Arduino implementation of Wiring, PHP, and MySQL</li>
-            <li>Uses 3rd party APIs like <a href="http://www.authy.com/">authy</a> for 2 factor authentication<li>
+            <li>Uses 3rd party APIs like <a href="http://www.authy.com/">authy</a> for 2 factor authentication</li>
             <li>End goal is to have a secure mobile, web, and NFC method to unlock a door</li>
             <li>Eventually plan on expanding to use bluetooth and a <a href="http://www.getnymi.com/">nymi</a></li>
           </ul>

@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set('utc');
+date_default_timezone_set('America/Los_Angeles');
 abstract class Page {
   final public function render(){
     $output = '<html>' .

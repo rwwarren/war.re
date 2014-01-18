@@ -167,8 +167,7 @@ li {
     <div id="experience">
       <h2>Technical Experience</h2>
       <ul>
-        <li>Web programming experience with Linux, Apache, MySQL, and PHP</li>
-        <li>Fascinated by server administration</li>
+        <li>Programming experience with Java, C++, Linux, Apache, MySQL, and PHP</li>
         <li>Desire to develop more web &amp; mobile programming experience</li>
         <li>Comfortable with bash and source control using git</li>
         <li>Favorite text-editor is Vim</li>
@@ -184,9 +183,9 @@ li {
             <ul>
               <li>Designing and implementing a 3rd party API</li>
               <li>API authentication and rate limiting with redis</li>
-              <li>Improving server testing by creating an endpoint testing application</li>
               <li>Improved speed of AWS use by updating AWS SDK throughout the site</li>
               <li>Using perforce as source control</li>
+              <li>Improved server testing by creating an endpoint testing application</li>
               <li>Learning objective c to create new game apps</li>
             </ul>
           </div>
@@ -271,7 +270,7 @@ li {
           <ul>
             <li>Candidate for Bachelor of Science in Computer Science and Software Engineering, anticipating April 2015 graduation</li>
             <li>Learned about data structures, algorithms, and object oriented programming in Computer Programming I &amp; II</li>
-            <li>Currently learning software engineering techniques, management principles, and algorithms in c++</li>
+            <li>Currently learning software engineering techniques, management principles, and algorithms in C++</li>
           </ul>
         </li>
       </ul>

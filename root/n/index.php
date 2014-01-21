@@ -43,6 +43,7 @@ class Home extends Page{
               '<p>Some things I have built are:</p>' .
               '<p class="indent">This site, <a href="http://war.re/n">war.re</a></p>'.
               '<p class="indent">My other site running node js <a href="http://wrixton.net">wrixton.net</a></p>'.
+              '<p class="indent">An electonic door lock system example <a href="http://doorlock.war.re/">PiDuinoLock</a></p>'.
               //'<p></p>'.
             '</li>' .
             '<li><p class="title">Resume</p>' .

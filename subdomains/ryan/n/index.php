@@ -108,7 +108,7 @@ ul ul {
   list-style: disc inside;
 }
 
-#content > #header, #experience, #work, #activities, #eduction {
+#content > #header, #experience, #work, #activities, #education {
   clear: both;
   width: 100%;
 }
@@ -144,7 +144,6 @@ ul ul {
 
 .as {
   font: normal 1.0em verdana;
-  text-transform: uppercase;
 }
 
 ul {
@@ -183,8 +182,6 @@ li {
             <ul>
               <li>Designing and implementing a 3rd party API</li>
               <li>API authentication and rate limiting with redis</li>
-              <li>Improved speed of AWS use by updating AWS SDK throughout the site</li>
-              <li>Using perforce as source control</li>
               <li>Improved server testing by creating an endpoint testing application</li>
               <li>Learning objective c to create new game apps</li>
             </ul>
@@ -209,7 +206,7 @@ li {
       <ul>
         <li>
         <div class="leftSide">
-          <h3>Personal Lock Project:</h3>
+          <h3><a href="https://github.com/rwwarren/door-lock/">PiDuinoLock:</a></h3>
           <ul>
             <li>In the process of using a Raspberry Pi and Arduino to create an automated door deadbolt</li>
             <li>Uses Java, Objective C, Arduino implementation of Wiring, PHP, and MySQL</li>
@@ -238,18 +235,6 @@ li {
       <ul>
         <li>
         <div class="leftSide">
-          <h3>Server Administration:</h3>
-          <ul>
-            <li>Configured a physical server from scratch with Ubuntu and Apache</li>
-            <li>Set up an Amazon ec2 linux server with Apache and node.js</li>
-            <li>Configured a LAMP stack with a Raspberry Pi</li>
-          </ul>
-        </div>
-        </li>
-      </ul>
-      <ul>
-        <li>
-        <div class="rightSide">
           <h3>Web Programming:</h3>
           <ul>
             <li>Running <a href="http://wrixton.net">wrixton.net</a>, a personal website, for seven years</li>

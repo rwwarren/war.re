@@ -37,7 +37,8 @@ class Home extends Page{
             '</li>' .
             '<li><p class="title">Bitbucket</p>' .
               '<p>My Bitbucket repo link is below</p>' .
-              '<p><a href="https://bitbucket.org/rwwarren">Bitbucket Repo</a></p>'.
+              //'<p><a href="https://bitbucket.org/rwwarren">Bitbucket Repo</a></p>'.
+              '<p><a href="http://git.wrixton.net/">Bitbucket Repo</a></p>'.
             '</li>' .
             '<li><p class="title">Stuff I\'ve Built</p>' .
               '<p>Some things I have built are:</p>' .

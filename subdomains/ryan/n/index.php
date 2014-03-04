@@ -155,6 +155,7 @@ li {
   margin-bottom: .2em;
 }
 </style>
+<script src="/n/google.js"></script>
 </head>
 <body>
   <div id="content">

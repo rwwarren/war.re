@@ -9,6 +9,7 @@ abstract class Page {
         $this->getTitle() .
         '</title>' .
         '<link rel="stylesheet" type="text/css" href="/n/scripts/styles.css" />' .
+        '<script src="/n/scripts/google.js"></script>' .
         $this->getScripts() .
       '</head>' .
       '<body>' .

@@ -118,7 +118,7 @@
 
   }
 
-  #content > #header, #experience, #work, #activities, #education {
+  #content > #header, #experience, #work, #relatedactivities, #education {
     clear: both;
     width: 100%;
   }
@@ -172,11 +172,22 @@
 
   ul {
     margin-left: .5em;
+    margin-right: .5em;
     padding-left: .5em;
   }
 
   li {
     margin-bottom: .2em;
+    clear: both;
+  }
+
+  .title {
+    width: 75%;
+    float: left;
+  }
+
+  .date {
+    float: right;
   }
   </style>
   <script src="/n/google.js"></script>
@@ -196,12 +207,13 @@
         <li>Favorite text-editor is Vim</li>
       </ul>
     </div>
-    <div id="activities">
+    <div id="relatedactivities">
       <h2>Related Activities</h2>
       <ul>
         <li>
         <div class="activity">
-          <h3><a href="https://github.com/rwwarren/door-lock/">PiDuinoLock:</a><span>July 2013 - Present</span></h3>
+          <div class="title"><h3><a href="https://github.com/rwwarren/door-lock/">PiDuinoLock:</a></h3></div>
+          <div class="date">July 2013 - Present</div>
           <ul>
             <li>Created an automated door deadbolt using a Raspberry Pi and Arduino, which unlocks a door</li>
             <li>Programmed in Java, Objective C, Arduino implementation of Wiring, PHP, and MySQL to understand how different technologies work in unison</li>
@@ -214,7 +226,8 @@
       <ul>
         <li>
         <div class="activity">
-          <h3>Coursework: Data Structures and Algorithms <span>January 2013 - Present</span></h3>
+          <div class="title"><h3>Coursework: Data Structures and Algorithms</h3></div>
+          <div class="date">January 2013 - Present</div>
           <ul>
             <li>Implemented a HashMap with an array using separate chaining increasing knowledge of Java</li>
             <li>Created a Heap with a comparator and deque to solve a maze using an array to learn about deques</li>
@@ -228,7 +241,8 @@
       <ul>
         <li>
         <div class="activity">
-          <h3>Web Programming: <span>January 2010 - Present</span></h3>
+          <div class="title"><h3>Web Programming:</h3></div>
+          <div class="date">January 2010 - Present</div>
           <ul>
             <li>Operated <a href="http://wrixton.net">wrixton.net</a> for 7 years using a host service to learn about web hosting and programming</li>
             <li>Created blog and fraternity website using WordPress and phpBB to build codeless sites with tools</li>
@@ -243,7 +257,8 @@
       <ul>
         <li>
           <div class="activity">
-            <h3>Web Development Intern, Sporcle <span>June 2013 - Present</span></h3>
+            <div class="title"><h3>Web Development Intern, Sporcle </h3></div>
+            <div class="date">June 2013 - Present</div>
             <ul>
               <li>Designed and implemented a 3rd party API in PHP to allow 3 companies access to game data</li>
               <li>Created API authentication and rate limiting with Redis to control access companies using the API</li>
@@ -254,7 +269,8 @@
         </li>
         <li>
           <div class="activity">
-            <h3>Technical Student Assistant, University of Washington <span>June 2012 - October 2013</span></h3>
+            <div class="title"><h3>Technical Student Assistant, University of Washington</h3></div>
+            <div class="date">June 2012 - October 2013</div>
             <ul>
               <li>Troubleshot application and network issues by using research to ensure computer uptime</li>
               <li>Imaged and configured hundreds of machines for students' use to guarantee student access to tools</li>
@@ -269,7 +285,8 @@
       <h2>Education</h2>
       <ul>
         <li>
-          <h3>Bachelor of Science in Computer Science and Software Engineering University of Washington: <span>Expected Graduation June 2015</span></h3>
+          <div class="title"><h3>Bachelor of Science in Computer Science and Software Engineering University of Washington:</h3></div>
+          <div class="date">Expected Graduation June 2015</div>
           <ul>
             <li>Relevant Courses: Object oriented programming, software engineering techniques, management principles, algorithms in C++, data structures in Java, and algorithms in Java</li>
           </ul>

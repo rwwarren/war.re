@@ -203,7 +203,7 @@
       <ul>
         <li>Programming experience with PHP, Java, Linux, Apache, MySQL, and C++</li>
         <li>Desire to develop more web &amp; mobile programming experience</li>
-        <li>Comfortable with bash and source control using Git</li>
+        <li>Comfortable with bash and source control using git</li>
         <li>Favorite text-editor is Vim</li>
       </ul>
     </div>
@@ -257,8 +257,19 @@
       <ul>
         <li>
           <div class="activity">
+            <div class="title"><h3>Software Engineer Intern, Live Nation </h3></div>
+            <div class="date">June 2014 - Current</div>
+            <ul>
+              <li>Involved in developing applications for purchasing tickets from computers and mobile devices, through the core systems that process the order, and out to metrics and monitoring tools.</li>
+              <li>Participated in all aspects of the development process including planning, design, implementation, and support.</li>
+              <li>Commited code on highly scalable applications generating millions of dollars in revenue every day. </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="activity">
             <div class="title"><h3>Web Development Intern, Sporcle </h3></div>
-            <div class="date">June 2013 - Present</div>
+            <div class="date">June 2013 - June 2014</div>
             <ul>
               <li>Designed and implemented a 3rd party API in PHP to allow 3 companies access to game data</li>
               <li>Created API authentication and rate limiting with Redis to control access companies using the API</li>

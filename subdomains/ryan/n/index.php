@@ -227,7 +227,7 @@
         <li>
         <div class="activity">
           <div class="title"><h3>Coursework: Data Structures and Algorithms</h3></div>
-          <div class="date">January 2013 - Present</div>
+          <div class="date">January 2013 - June 2014</div>
           <ul>
             <li>Implemented a HashMap with an array using separate chaining increasing knowledge of Java</li>
             <li>Created a Heap with a comparator and deque to solve a maze using an array to learn about deques</li>
@@ -258,7 +258,7 @@
         <li>
           <div class="activity">
             <div class="title"><h3>Software Engineer Intern, Live Nation </h3></div>
-            <div class="date">June 2014 - Current</div>
+            <div class="date">June 2014 - December 2014</div>
             <ul>
               <li>Involved in developing applications for purchasing tickets from computers and mobile devices, through the core systems that process the order, and out to metrics and monitoring tools.</li>
               <li>Participated in all aspects of the development process including planning, design, implementation, and support.</li>

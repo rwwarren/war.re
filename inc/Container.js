@@ -7,6 +7,7 @@ var Navigation = ReactRouter.Navigation;
 var Container = React.createClass({
   mixins: [Navigation],
   render: function () {
+      //<div className="homeContainer">
     return (
       <div className="container">
         <RouteHandler />

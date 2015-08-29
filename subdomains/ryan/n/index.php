@@ -29,6 +29,7 @@
   }
   body {
     line-height: 1;
+    background-color: #EBEFF0;
   }
   blockquote, q {
     quotes: none;

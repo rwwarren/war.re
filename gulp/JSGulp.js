@@ -14,8 +14,8 @@ var watchify = require('watchify');
 es6ify.traceurOverrides = {experimental: true};
 
 var jsBundler;
-var rootJSPath = __dirname + '/../src/inc/appRouter.js';
-var outputPath = __dirname + '/../src/root/js';
+var rootJSPath = __dirname + '/../inc/appRouter.js';
+var outputPath = __dirname + '/../root/js';
 var buildFile = 'Bundle.js';
 
 var JSGulp = {

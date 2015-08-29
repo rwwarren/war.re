@@ -1,11 +1,8 @@
 'use strict';
-//var Admin = require('./Admin');
-//var Configuration = require('./Config');
-//var Container = require('./Container');
-//var Home = require('./Home');
-//var FourOFour = require('./FourOFour');
-//var Lock = require('./Lock');
-//var User = require('./User');
+var Container = require('./Container');
+var FourOFour = require('./FourOFour');
+var Home = require('./Home');
+var Content = require('./Content');
 
 //var isMobile = require('./isMobile');
 //if (isMobile()) {
@@ -24,12 +21,11 @@ var Route = ReactRouter.Route;
 
 var routes = (
   //{/* config */}
-  <Route handler={App} path="/">
-    <Route path="/" name="config" handler={Configuration}/>
+  <Route handler={Container} path="/">
     {/* home */}
     <DefaultRoute name="home" handler={Home}/>
     {/* admin */}
-    <Route path="admin/" name="admin" handler={Admin}/>
+    <Route path="n/" name="n" handler={Content}/>
     {/* 404 */}
     <NotFoundRoute handler={FourOFour}/>
   </Route>

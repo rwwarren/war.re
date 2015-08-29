@@ -49,6 +49,10 @@ p {
     color: #EBEFF0;
 }
 
+.text {
+    padding: 15px;
+}
+
 /*#header {*/
 /*font-family: "Georgia", Times, serif;*/
 /*font-weight: bolder;*/

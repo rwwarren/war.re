@@ -13,16 +13,25 @@ var Content = React.createClass({
       <div className="homeContainer">
         <h1>Ryan Warren</h1>
         <br/>
-        <a href="http://ryan.war.re/n">My Resume</a>
+
+        <div className="text">
+          <a href="http://ryan.war.re/n">My Resume</a>
+        </div>
         <br/>
-        <a href="https://github.com/rwwarren">
-          <img src="/GitHub-Mark-64px.png"/>
-        </a>
+
+        <div className="text">
+          <a href="https://github.com/rwwarren">
+            <img src="/GitHub-Mark-64px.png"/> Github
+          </a>
+        </div>
         <br/>
-        <a href="https://linkedin.com/in/ryanwwarren">
-          <img src="/In-Black-66px-R.png"/>
-        </a>
-        <p>{'\u00A9'} {theYear} War.re</p>
+
+        <div className="text">
+          <a href="https://linkedin.com/in/ryanwwarren">
+            <img src="/In-Black-66px-R.png"/> Linkedin
+          </a>
+        </div>
+        <p className="text">{'\u00A9'} {theYear} War.re</p>
       </div>
     );
   }

@@ -258,6 +258,17 @@
         <li>
           <div class="activity">
             <div class="title"><h3>Software Engineer Intern, Live Nation </h3></div>
+            <div class="date">March 2015 - June 2015</div>
+            <ul>
+              <li>Involved in developing applications for purchasing tickets from computers and mobile devices, through the core systems that process the order, and out to metrics and monitoring tools.</li>
+              <li>Participated in all aspects of the development process including planning, design, implementation, and support.</li>
+              <li>Commited code on highly scalable applications generating millions of dollars in revenue every day. </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="activity">
+            <div class="title"><h3>Software Engineer Intern, Live Nation </h3></div>
             <div class="date">June 2014 - December 2014</div>
             <ul>
               <li>Involved in developing applications for purchasing tickets from computers and mobile devices, through the core systems that process the order, and out to metrics and monitoring tools.</li>
@@ -297,7 +308,7 @@
       <ul>
         <li>
           <div class="title"><h3>Bachelor of Science in Computer Science and Software Engineering University of Washington:</h3></div>
-          <div class="date">Expected Graduation June 2015</div>
+          <div class="date">Graduated June 2015</div>
           <ul>
             <li>Relevant Courses: Object oriented programming, software engineering techniques, management principles, algorithms in C++, data structures in Java, and algorithms in Java</li>
           </ul>

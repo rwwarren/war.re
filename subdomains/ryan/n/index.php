@@ -219,7 +219,7 @@
             <li>Created an automated door deadbolt using a Raspberry Pi and Arduino, which unlocks a door</li>
             <li>Programmed in Java, Objective C, Arduino implementation of Wiring, PHP, and MySQL to understand how different technologies work in unison</li>
             <li>Utilized 3rd party API (<a href="http://www.authy.com/">authy</a>) for 2 factor authentication to learn about implementing security</li>
-            <li>Planned to expand easily to use Bluetooth and a <a href="http://www.getnymi.com/">Nymi</a> by using object oriented design</li>
+            <li>Planned to expand easily to use Bluetooth and a <a href="http://www.nymi.com/">Nymi</a> by using object oriented design</li>
           </ul>
         </div>
         </li>
@@ -256,6 +256,12 @@
     <div id="work">
       <h2>Relevant Work Experience</h2>
       <ul>
+        <li>
+          <div class="activity">
+            <div class="title"><h3>Java Engineer / Software Engineer, Porch </h3></div>
+            <div class="date">July 2015 - Current</div>
+          </div>
+        </li>
         <li>
           <div class="activity">
             <div class="title"><h3>Software Engineer Intern, Live Nation </h3></div>
@@ -298,7 +304,7 @@
       <ul>
         <li>
           <div class="title"><h3>Bachelor of Science in Computer Science and Software Engineering University of Washington:</h3></div>
-          <div class="date">Expected Graduation June 2015</div>
+          <div class="date">Graduated June 2015</div>
           <ul>
             <li>Relevant Courses: Object oriented programming, software engineering techniques, management principles, algorithms in C++, data structures in Java, and algorithms in Java</li>
           </ul>

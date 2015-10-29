@@ -1,0 +1,4 @@
+*.log
+*.swp
+.gitignore
+subdomains/doorlock-example/*

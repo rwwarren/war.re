@@ -61,7 +61,7 @@ var JSGulp = {
         title: 'JS Gulp',
         subtitle: 'Failure!',
         message: 'Error: <%= error.message %>',
-        sound: 'beep',
+        sound: 'beep'
     }));
     stream.on('end', function() {
       var time = Date.now() - start;
@@ -99,7 +99,7 @@ var JSGulp = {
       console.log('Cleaned JS');
       done();
     });
-  },
+  }
 };
 
 module.exports = JSGulp;

@@ -18,23 +18,12 @@ var Content = React.createClass({
         </div>
         <br/>
 
-        <div className="text">
           <a href="https://github.com/rwwarren">
-            <img src="/GitHub-Mark-64px.png"/> Github
-          </a>
-        </div>
-        <br/>
-
-        <div className="text">
+            <img src="/GitHub-Mark-64px.png"/></a>
           <a href="https://linkedin.com/in/ryanwwarren">
-            <img src="/In-Black-66px-R.png"/> Linkedin
-          </a>
-        </div>
-        <div className="text">
+            <img src="/In-Black-66px-R.png"/></a>
           <a href="http://stackoverflow.com/users/1879792/ryan-warren">
-            <img src="/stackoverflow-xxl.png"/> Stack Overflow
-          </a>
-        </div>
+            <img src="/stackoverflow-xxl.png"/></a>
         <p className="text">{'\u00A9'} {theYear} War.re</p>
       </div>
     );

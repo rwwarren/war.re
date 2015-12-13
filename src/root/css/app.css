@@ -21,16 +21,12 @@ body {
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    /*max-height: 30 px;*/
-    /*max-width:;: 30 px;*/
 }
 
 img {
-    /*max-height: 30 px;*/
-    /*max-width: 30 px;*/
-    /*max-width: 30 px;*/
     height: 30px;
     width: 30px;
+    margin: 5px;
 }
 
 h1 {
@@ -40,9 +36,7 @@ h1 {
 }
 
 p {
-    /*color: #EBEFF0;*/
     text-align: center;
-    /*max-size: 30 px;*/
 }
 
 .text {

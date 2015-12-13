@@ -1,6 +1,5 @@
 'use strict';
 
-
 var Content = React.createClass({
   render: function() {
     //<div className="content">
@@ -29,6 +28,11 @@ var Content = React.createClass({
         <div className="text">
           <a href="https://linkedin.com/in/ryanwwarren">
             <img src="/In-Black-66px-R.png"/> Linkedin
+          </a>
+        </div>
+        <div className="text">
+          <a href="http://stackoverflow.com/users/1879792/ryan-warren">
+            <img src="/stackoverflow-xxl.png"/> Stack Overflow
           </a>
         </div>
         <p className="text">{'\u00A9'} {theYear} War.re</p>

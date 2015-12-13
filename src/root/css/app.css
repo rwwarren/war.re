@@ -35,7 +35,12 @@ h1 {
     font-size: 70px;
 }
 
-p {
+p.subtitle {
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+p.text {
     text-align: center;
 }
 

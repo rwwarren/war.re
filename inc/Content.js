@@ -13,11 +13,16 @@ var Content = React.createClass({
         <h1>Ryan Warren</h1>
         <br/>
 
-        <div className="text">
-          <a href="http://ryan.war.re/n">My Resume</a>
+        <p className="subtitle">
+          Software Engineer
+        </p>
+        <p>
+          Hi my name is Ryan Warren
+        </p>
+        <div className="info">
+          <a href="http://ryan.war.re/n"></a>
         </div>
         <br/>
-
           <a href="https://github.com/rwwarren">
             <img src="/GitHub-Mark-64px.png"/></a>
           <a href="https://linkedin.com/in/ryanwwarren">

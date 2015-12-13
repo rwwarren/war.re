@@ -12,7 +12,6 @@ var Content = React.createClass({
       <div className="homeContainer">
         <h1>Ryan Warren</h1>
         <br/>
-
         <p className="subtitle">
           Software Engineer
         </p>

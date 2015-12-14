@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-    width: 900px;
+    width: 600px;
     height: auto;
     margin-top: 150px;
     margin-left: auto;
@@ -16,7 +16,7 @@ body {
 }
 
 .content {
-    width: 800px;
+    width: 600px;
     height: auto;
     margin-top: 50px;
     margin-left: auto;
@@ -45,6 +45,9 @@ p.text {
 }
 
 .text {
+    padding: 35px;
+}
 
-    padding: 15px;
+.info {
+    font-size: 20px;
 }

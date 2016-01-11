@@ -11,14 +11,13 @@ app.set('view engine', 'jade');
 //app.use(cookieParser());
 app.use(express.static(__dirname + '/../src/root'));
 
-//app.get('/', function(req, res) {
+app.get('/google85037a36accafa5b.html', function(req, res) {
+  res.send("google-site-verification: google85037a36accafa5b.html");
+});
+
 app.get('*', function(req, res) {
   res.render('index')
 });
-
-//app.get('/*', function(req, res) {
-//  res.render('index')
-//});
 
 var serverPort = process.env.PORT || 3000;
 var serverAddress = process.env.ADDRESS || 'localhost';

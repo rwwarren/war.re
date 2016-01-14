@@ -8,6 +8,10 @@ app.set('views', __dirname + '/../src/views');
 app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/../src/root'));
 
+app.get('/google85037a36accafa5b.html', function(req, res) {
+  res.send("google-site-verification: google85037a36accafa5b.html");
+});
+
 app.get('*', function(req, res) {
   res.render('index')
 });

@@ -88,16 +88,14 @@ var JSGulp = {
     stream.read();
   },
 
-  clean: function(done) {
+  clean: function() {
     del([outputPath + '/' + buildFile], function(err, paths) {
       if (err) {
         console.error('Error cleaning JS: ' + err.toString());
-        done();
         return;
       }
 
       console.log('Cleaned JS');
-      done();
     });
   }
 };

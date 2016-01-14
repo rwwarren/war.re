@@ -14,6 +14,7 @@ var routes = (
     {/* home */}
     <DefaultRoute name="home" handler={Home}/>
     {/* admin */}
+    <Route path="n" name="content" handler={Content}/>
     <Route path="n/" name="content" handler={Content}/>
     {/* 404 */}
     <NotFoundRoute handler={FourOFour}/>

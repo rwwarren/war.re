@@ -1,17 +1,11 @@
-/* gulpfile.js */
-
-var JSGulp = require('./gulp/JSGulp');
-
 var gulp = require('gulp');
-
-JSGulp.createTask();
-
-gulp.task('watch', ['clean'], function(done) {
-  JSGulp.watch();
+var bundle = require('gulp-react-bundle');
+ 
+gulp.task('build', function() {
+  bundle('./inc/appRouter.js', './alpha.js');
 });
-
-gulp.task('clean', function(done) {
-  JSGulp.clean();
+ 
+gulp.task('build-with-dependency', function() {
+  var lib = bundle.lib(['lodash', 'jquery'], './alpha.js');
+  bundle('./js/app.js', './build/app.js', lib);
 });
-
-gulp.task('default', ['watch']);

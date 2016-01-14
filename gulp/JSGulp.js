@@ -75,6 +75,11 @@ var JSGulp = {
       // minification
       stream = stream.pipe(buffer());
       stream = stream.pipe(uglify());
+    } else {
+      console.log('In dev mode');
+      gulp.src(devreact)
+        .pipe(rename(reactFile))
+        .pipe(gulp.dest(outputPath));
     }
 
     stream = stream.pipe(gulp.dest(outputPath));
@@ -94,7 +99,6 @@ var JSGulp = {
         console.error('Error cleaning JS: ' + err.toString());
         return;
       }
-
       console.log('Cleaned JS');
     });
   }

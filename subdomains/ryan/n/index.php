@@ -208,58 +208,17 @@
         <li>Favorite text-editor is Vim</li>
       </ul>
     </div>
-    <div id="relatedactivities">
-      <h2>Related Activities</h2>
-      <ul>
-        <li>
-        <div class="activity">
-          <div class="title"><h3><a href="https://github.com/rwwarren/door-lock/">PiDuinoLock:</a></h3></div>
-          <div class="date">July 2013 - Present</div>
-          <ul>
-            <li>Created an automated door deadbolt using a Raspberry Pi and Arduino, which unlocks a door</li>
-            <li>Programmed in Java, Objective C, Arduino implementation of Wiring, PHP, and MySQL to understand how different technologies work in unison</li>
-            <li>Utilized 3rd party API (<a href="http://www.authy.com/">authy</a>) for 2 factor authentication to learn about implementing security</li>
-            <li>Planned to expand easily to use Bluetooth and a <a href="http://www.nymi.com/">Nymi</a> by using object oriented design</li>
-          </ul>
-        </div>
-        </li>
-      </ul>
-      <ul>
-        <li>
-        <div class="activity">
-          <div class="title"><h3>Coursework: Data Structures and Algorithms</h3></div>
-          <div class="date">January 2013 - June 2014</div>
-          <ul>
-            <li>Implemented a HashMap with an array using separate chaining increasing knowledge of Java</li>
-            <li>Created a Heap with a comparator and deque to solve a maze using an array to learn about deques</li>
-            <li>Drew stars on a drawingpanel using guava collections to understand how to use Java collections</li>
-            <li>Implemented breadth first search, depth first search, and Dijkstra's algorithm to a graph class</li>
-            <li>Modified a quicksort algorithm and used runtimes to compare sorting algorithms to learn benefits of each</li>
-          </ul>
-        </div>
-        </li>
-      </ul>
-      <ul>
-        <li>
-        <div class="activity">
-          <div class="title"><h3>Web Programming:</h3></div>
-          <div class="date">January 2010 - Present</div>
-          <ul>
-            <li>Operated <a href="http://wrixton.net">wrixton.net</a> for 7 years using a host service to learn about web hosting and programming</li>
-            <li>Created blog and fraternity website using WordPress and phpBB to build codeless sites with tools</li>
-            <li>Realized about source control and merging by using bitbucket and github for Git source control which helped</li>
-          </ul>
-        </div>
-        </li>
-      </ul>
-    </div>
     <div id="work">
       <h2>Relevant Work Experience</h2>
       <ul>
         <li>
           <div class="activity">
-            <div class="title"><h3>Java Engineer / Software Engineer, Porch </h3></div>
+            <div class="title"><h3>Software Engineer, Porch </h3></div>
             <div class="date">July 2015 - Current</div>
+	    <ul>
+	      <li>Designed and implemented APIs for clients to access all necessary data, which improved user experience</li>
+	      <li>Enhanced accuracy of ecommerce system while creating testing tools</li>
+	    </ul>
           </div>
         </li>
         <li>
@@ -307,6 +266,51 @@
               <li>Trained 2 new employees through hands-on work to strengthen capability of independent work</li>
             </ul>
           </div>
+        </li>
+      </ul>
+    </div>
+    <div id="relatedactivities">
+      <h2>Related Activities</h2>
+      <ul>
+        <li>
+        <div class="activity">
+          <div class="title"><h3><a href="https://github.com/rwwarren/door-lock/">PiDuinoLock:</a></h3></div>
+          <div class="date">July 2013 - Present</div>
+          <ul>
+            <li>Created an automated door deadbolt using a Raspberry Pi and Arduino, which unlocks a door</li>
+            <li>Programmed in Java, Objective C, Arduino implementation of Wiring, PHP, and MySQL to understand how different technologies work in unison</li>
+            <li>Utilized 3rd party API (<a href="http://www.authy.com/">authy</a>) for 2 factor authentication to learn about implementing security</li>
+            <li>Planned to expand easily to use Bluetooth and a <a href="http://www.nymi.com/">Nymi</a> by using object oriented design</li>
+          </ul>
+        </div>
+        </li>
+      </ul>
+      <ul>
+        <li>
+        <div class="activity">
+          <div class="title"><h3>Coursework: Data Structures and Algorithms</h3></div>
+          <div class="date">January 2013 - June 2014</div>
+          <ul>
+            <li>Implemented a HashMap with an array using separate chaining increasing knowledge of Java</li>
+            <li>Created a Heap with a comparator and deque to solve a maze using an array to learn about deques</li>
+            <li>Drew stars on a drawingpanel using guava collections to understand how to use Java collections</li>
+            <li>Implemented breadth first search, depth first search, and Dijkstra's algorithm to a graph class</li>
+            <li>Modified a quicksort algorithm and used runtimes to compare sorting algorithms to learn benefits of each</li>
+          </ul>
+        </div>
+        </li>
+      </ul>
+      <ul>
+        <li>
+        <div class="activity">
+          <div class="title"><h3>Web Programming:</h3></div>
+          <div class="date">January 2010 - Present</div>
+          <ul>
+            <li>Operated <a href="http://wrixton.net">wrixton.net</a> for 7 years using a host service to learn about web hosting and programming</li>
+            <li>Created blog and fraternity website using WordPress and phpBB to build codeless sites with tools</li>
+            <li>Realized about source control and merging by using bitbucket and github for Git source control which helped</li>
+          </ul>
+        </div>
         </li>
       </ul>
     </div>

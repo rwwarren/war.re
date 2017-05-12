@@ -213,11 +213,23 @@
       <ul>
         <li>
           <div class="activity">
+            <div class="title"><h3>Software Engineer II, Porch </h3></div>
+            <div class="date">August 2016 - Current</div>
+	    <ul>
+	      <li>Built tools to manage billing of our clients to reduce reliance on manual salesperson management</li>
+	      <li>Created and own the subscription administration service, which delivers our product to consumers</li>
+	      <li>Worked to integrate lead distribution pacing that increased homeowner delight with our product</li>
+	    </ul>
+          </div>
+        </li>
+        <li>
+          <div class="activity">
             <div class="title"><h3>Software Engineer, Porch </h3></div>
-            <div class="date">July 2015 - Current</div>
+            <div class="date">July 2015 - August 2016</div>
 	    <ul>
 	      <li>Designed and implemented APIs for clients to access all necessary data, which improved user experience</li>
 	      <li>Enhanced accuracy of ecommerce system while creating testing tools</li>
+	      <li>Wrote tools to more accurately categorize leads submitted, thereby improving efficiency of distribution</li>
 	    </ul>
           </div>
         </li>

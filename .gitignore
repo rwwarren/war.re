@@ -5,3 +5,4 @@ subdomains/doorlock-example/*
 .idea/
 node_modules/
 root/js/Bundle.js
+nohup.out

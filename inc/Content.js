@@ -17,7 +17,7 @@ var Content = React.createClass({
         </p>
 
         <p className="info">
-          Hi! I am Seattle Java developer currently working for <a href="https://porch.com">Porch.com</a>.
+          Hi! I am Seattle Java developer currently working for <a href="https://amazon.com">amazon.com</a>.
         </p>
 
         <p className="info">

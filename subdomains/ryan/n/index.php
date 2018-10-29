@@ -213,8 +213,19 @@
       <ul>
         <li>
           <div class="activity">
-            <div class="title"><h3>Software Engineer II, Porch </h3></div>
-            <div class="date">August 2016 - Current</div>
+            <div class="title"><h3>Software Engineer, Amazon</h3></div>
+            <div class="date">July 2017 - Present</div>
+	    <ul>
+	      <li>Rebuilt and own the advertising configuration frontend service which is used for millions of dollars of revenue</li>
+	      <li>Onboarded and worked with partner teams to implement our services onto their Amazon page</li>
+	      <li>Created tools which save page owners and program managers hours when creating or reporting on ads</li>
+	    </ul>
+          </div>
+        </li>
+        <li>
+          <div class="activity">
+            <div class="title"><h3>Software Engineer II, Porch</h3></div>
+            <div class="date">August 2016 - July 2017</div>
 	    <ul>
 	      <li>Built tools to manage billing of our clients to reduce reliance on manual salesperson management</li>
 	      <li>Created and own the subscription administration service, which delivers our product to consumers</li>
@@ -224,7 +235,7 @@
         </li>
         <li>
           <div class="activity">
-            <div class="title"><h3>Software Engineer, Porch </h3></div>
+            <div class="title"><h3>Software Engineer, Porch</h3></div>
             <div class="date">July 2015 - August 2016</div>
 	    <ul>
 	      <li>Designed and implemented APIs for clients to access all necessary data, which improved user experience</li>
@@ -235,7 +246,7 @@
         </li>
         <li>
           <div class="activity">
-            <div class="title"><h3>Software Engineer Intern, Live Nation </h3></div>
+            <div class="title"><h3>Software Engineer Intern, Live Nation</h3></div>
             <div class="date">March 2015 - June 2015</div>
             <ul>
               <li>Involved in developing applications for purchasing tickets from computers and mobile devices, through the core systems that process the order, and out to metrics and monitoring tools.</li>
@@ -246,7 +257,7 @@
         </li>
         <li>
           <div class="activity">
-            <div class="title"><h3>Software Engineer Intern, Live Nation </h3></div>
+            <div class="title"><h3>Software Engineer Intern, Live Nation</h3></div>
             <div class="date">June 2014 - December 2014</div>
             <ul>
               <li>Involved in developing applications for purchasing tickets from computers and mobile devices, through the core systems that process the order, and out to metrics and monitoring tools.</li>

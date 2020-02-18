@@ -216,8 +216,9 @@
             <div class="title"><h3>Software Engineer 2, Amazon</h3></div>
             <div class="date">July 2019 - Present</div>
             <ul>
-              <li>Wrote library used to tie ads across the entire ad stack</li>
-              <li>Designed and implemented cross team projects that improve ad metrics and latency</li>
+              <li>Wrote library used to tie ads across the entire ad stack in under 3 milliseconds</li>
+              <li>Mentored interns and junior engineers to help them get hired and promoted</li>
+              <li>Designed and implemented cross team projects that improve monetization, fill rate and latency</li>
             </ul>
           </div>
         </li>

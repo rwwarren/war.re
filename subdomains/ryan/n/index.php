@@ -202,10 +202,10 @@
     <div id="experience">
       <h2>Technical Experience</h2>
       <ul>
-        <li>Programming experience with Java, MySQL, Linux, Apache, PHP, and C++</li>
+        <li>Programming experience with Java, git, Bash, Linux, Scala, PHP, Apache, MySQL, Go, ReactJS, React Native, and C++ </li>
         <li>Desire to develop more web &amp; mobile programming experience</li>
         <li>Comfortable with bash and source control using git</li>
-        <li>Favorite text-editor is Vim</li>
+        <li>Favorite editors are vim and IntelliJ</li>
       </ul>
     </div>
     <div id="work">

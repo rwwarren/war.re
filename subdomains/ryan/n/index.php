@@ -340,7 +340,7 @@
           <div class="title"><h3>Web Programming:</h3></div>
           <div class="date">January 2010 - Present</div>
           <ul>
-            <li>Operated <a href="http://wrixton.net">wrixton.net</a> for 7 years using a host service to learn about web hosting and programming</li>
+            <li>Operated <a href="http://wrixton.net">wrixton.net</a> for <?php echo date("Y") - 2010 ?> years using a host service to learn about web hosting and programming</li>
             <li>Created blog and fraternity website using WordPress and phpBB to build codeless sites with tools</li>
             <li>Realized about source control and merging by using bitbucket and github for Git source control which helped</li>
           </ul>

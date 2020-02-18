@@ -202,7 +202,7 @@
     <div id="experience">
       <h2>Technical Experience</h2>
       <ul>
-        <li>Programming experience with PHP, Java, Linux, Apache, MySQL, and C++</li>
+        <li>Programming experience with Java, MySQL, Linux, Apache, PHP, and C++</li>
         <li>Desire to develop more web &amp; mobile programming experience</li>
         <li>Comfortable with bash and source control using git</li>
         <li>Favorite text-editor is Vim</li>
@@ -213,13 +213,23 @@
       <ul>
         <li>
           <div class="activity">
+            <div class="title"><h3>Software Engineer 2, Amazon</h3></div>
+            <div class="date">July 2019 - Present</div>
+            <ul>
+              <li>Wrote library used to tie ads across the entire ad stack</li>
+              <li>Designed and implemented cross team projects that improve ad metrics and latency</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="activity">
             <div class="title"><h3>Software Engineer, Amazon</h3></div>
-            <div class="date">July 2017 - Present</div>
-	    <ul>
-	      <li>Rebuilt and own the advertising configuration frontend service which is used for millions of dollars of revenue</li>
-	      <li>Onboarded and worked with partner teams to implement our services onto their Amazon page</li>
-	      <li>Created tools which save page owners and program managers hours when creating or reporting on ads</li>
-	    </ul>
+            <div class="date">July 2017 - June 2019</div>
+            <ul>
+              <li>Rebuilt and own the advertising configuration frontend service which is used for millions of dollars of revenue</li>
+              <li>Onboarded and worked with partner teams to implement our services onto their Amazon page</li>
+              <li>Created tools which save page owners and program managers hours when creating or reporting on ads</li>
+            </ul>
           </div>
         </li>
         <li>

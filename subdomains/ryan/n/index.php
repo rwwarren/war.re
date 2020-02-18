@@ -213,7 +213,7 @@
       <ul>
         <li>
           <div class="activity">
-            <div class="title"><h3>Software Engineer 2, Amazon</h3></div>
+            <div class="title"><h3>Software Engineer II, Amazon</h3></div>
             <div class="date">July 2019 - Present</div>
             <ul>
               <li>Wrote library used to tie ads across the entire ad stack in under 3 milliseconds</li>

@@ -213,8 +213,17 @@
       <ul>
         <li>
           <div class="activity">
-            <div class="title"><h3>Software Engineer II, Amazon</h3></div>
-            <div class="date">July 2019 - Present</div>
+            <div class="title"><h3>Software Engineer, Stripe (Admin Platform)</h3></div>
+            <div class="date">March 2021 - Present</div>
+            <ul>
+              <li>Worked on Internal Tools</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="activity">
+            <div class="title"><h3>Software Engineer II, Amazon (Ads)</h3></div>
+            <div class="date">July 2019 - February 2021</div>
             <ul>
               <li>Built the library used to connect advertisements across the entire stack in under 3 milliseconds</li>
               <li>Mentor interns and junior engineers to help them achieve their career goals</li>
@@ -224,7 +233,7 @@
         </li>
         <li>
           <div class="activity">
-            <div class="title"><h3>Software Engineer, Amazon</h3></div>
+            <div class="title"><h3>Software Engineer, Amazon (Ads)</h3></div>
             <div class="date">July 2017 - June 2019</div>
             <ul>
               <li>Rebuilt and own the advertising configuration frontend service which is used for millions of dollars of revenue</li>

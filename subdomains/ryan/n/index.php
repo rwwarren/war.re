@@ -213,10 +213,10 @@
       <ul>
         <li>
           <div class="activity">
-            <div class="title"><h3>Software Engineer, Stripe (Admin Platform)</h3></div>
+            <div class="title"><h3>Software Engineer, Stripe (Internal Tools)</h3></div>
             <div class="date">March 2021 - Present</div>
             <ul>
-              <li>Worked on Internal Tools</li>
+              <li>Internal Tools for Stripes to complete their jobs</li>
             </ul>
           </div>
         </li>
@@ -318,7 +318,7 @@
         <li>
         <div class="activity">
           <div class="title"><h3><a href="https://github.com/rwwarren/door-lock/">PiDuinoLock:</a></h3></div>
-          <div class="date">July 2013 - Present</div>
+          <div class="date">July 2013 - May 2017</div>
           <ul>
             <li>Created an automated door deadbolt using a Raspberry Pi and Arduino, which unlocks a door</li>
             <li>Programmed in Java, Objective C, Arduino implementation of Wiring, PHP, and MySQL to understand how different technologies work in unison</li>

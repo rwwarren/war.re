@@ -14,3 +14,8 @@ npm start
 ```
   browserify -t [ reactify --es6 --target es5 ] inc/appRouter.js > src/root/js/Bundle.js
 ```
+
+## Renew ssl certs
+```
+sudo certbot renew
+```

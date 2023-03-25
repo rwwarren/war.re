@@ -1,9 +1,0 @@
-RewriteEngine on
-
-RewriteCond %{SCRIPT_FILENAME} !-f
-# check if the request is not an existing directory
-RewriteCond %{SCRIPT_FILENAME} !-d
-# check if the request is not an existing symlink
-RewriteCond %{SCRIPT_FILENAME} !-s
-# rewrite all requests that passed the conditions to the file index.php
-RewriteRule .* index.html

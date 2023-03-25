@@ -31,7 +31,7 @@ export default function Home() {
             <div className={styles.info}>
                 If you would like to learn a little more, see my <Link href="https://ryan.war.re/n">resume</Link>.
             </div>
-            <div className={styles.info}>
+            <div className={styles.images}>
                 <Link href="https://github.com/rwwarren">
                     <Image
                         src="github.svg"

@@ -76,7 +76,6 @@ export default function Home() {
                         'Modified a quicksort algorithm and used runtimes to compare sorting algorithms to learn benefits of each']} />
               <Activity name={"Web Programming"} start={"January 2010"} end={"Present"}
                         items={[<>Operated <a href="http://wrixton.net">wrixton.net</a> for {(new Date().getFullYear() - 2010)} years using a host service to learn about web hosting and programming</>,
-                        // items={[{"Operated" <a href="http://wrixton.net">wrixton.net</a> for {- 2010} years using a host service to learn about web hosting and programming"},
                         'Created blog and fraternity website using WordPress and phpBB to build codeless sites with tools',
                         'Realized about source control and merging by using bitbucket and github for Git source control which helped']} />
 

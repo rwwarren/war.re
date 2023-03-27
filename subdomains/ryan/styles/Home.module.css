@@ -27,7 +27,7 @@
 
 .content {
   padding-top: 1em;
-  width: 850px;
+  max-width: 850px;
   margin: 0 auto;
 }
 

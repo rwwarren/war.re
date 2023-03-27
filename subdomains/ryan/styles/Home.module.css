@@ -1,0 +1,104 @@
+.main table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.main p {
+  margin-top: 0;
+  margin-bottom: .35em;
+}
+
+.main h1 {
+  font: 1.8em Verdana;
+  margin-bottom: .5em;
+}
+
+.main h2 {
+  font: Bold 1.2em Verdana;
+  text-transform: uppercase;
+  border-bottom:1px #dddddd solid;
+  margin-top: 1.0em;
+  margin-bottom: .35em;
+}
+
+.main h3 {
+  font: 1.2em Verdana;
+}
+
+.content {
+  padding-top: 1em;
+  width: 850px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+}
+
+.main ul ul {
+  list-style: disc inside;
+}
+
+.spacing {
+  display: inline;
+  margin-left: .7em;
+  margin-right: .7em;
+}
+
+.activity {
+  float: left;
+  width: 100%;
+  margin-right: 1em;
+  padding-right: 1em;
+  margin-bottom: 1em;
+}
+
+.rightSide {
+  float: left;
+  width: 50%;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+.for {
+  font: bold 1.0em verdana;
+  text-transform: uppercase;
+}
+
+.main span {
+  font-weight: normal;
+  font-size: .8em;
+  text-transform: none;
+  float: right;
+  margin-right: 1em;
+}
+
+.for span {
+  font-weight: normal;
+  text-transform: none;
+  float: right;
+}
+
+.as {
+  font: normal 1.0em verdana;
+}
+
+.main ul {
+  margin-left: .5em;
+  margin-right: .5em;
+  padding-left: .5em;
+}
+
+.main li {
+  margin-bottom: .2em;
+  clear: both;
+}
+
+.title {
+  width: 75%;
+  float: left;
+}
+
+.date {
+  float: right;
+}

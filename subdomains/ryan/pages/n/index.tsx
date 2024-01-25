@@ -66,8 +66,8 @@ export default function Home() {
               <Activity name={<a href="https://github.com/rwwarren/door-lock/">PiDuinoLock</a>} start={"July 2013"} end={"May 2017"}
                         items={['Created an automated door deadbolt using a Raspberry Pi and Arduino, which unlocks a door',
                         'Programmed in Java, Objective C, Arduino implementation of Wiring, PHP, and MySQL learn integration',
-                        <>Utilized 3rd party API (<a href="http://www.authy.com/">authy</a>) for 2 factor authentication to learn about implementing security</>,
-                        <>Planned to expand easily to use Bluetooth and a <a href="http://www.nymi.com/">Nymi</a> by using object oriented design</>]} />
+                        <>Utilized 3rd party API (<a href="https://www.authy.com/">authy</a>) for 2 factor authentication to learn about implementing security</>,
+                        <>Planned to expand easily to use Bluetooth and a <a href="https://www.nymi.com/">Nymi</a> by using object oriented design</>]} />
               <Activity name={"Coursework: Data Structures and Algorithms"} start={"January 2013"} end={"June 2014"}
                         items={['Implemented a HashMap with an array using separate chaining increasing knowledge of Java',
                         'Created a Heap with a comparator and deque to solve a maze using an array to learn about deques',
@@ -75,7 +75,7 @@ export default function Home() {
                         'Implemented breadth first search, depth first search, and Dijkstra\'s algorithm to a graph class',
                         'Modified a quicksort algorithm and used runtimes to compare sorting algorithms to learn benefits of each']} />
               <Activity name={"Web Programming"} start={"January 2010"} end={"Present"}
-                        items={[<>Operated websites like <a href="http://wrixton.net">wrixton.net</a>, <a href="http://wrixton.com">wrixton.com</a>, and <a href="http://wrixton.xyz">wrixton.xyz</a> for {(new Date().getFullYear() - 2010)} years using a host service to learn about web hosting and programming</>,
+                        items={[<>Operated websites like <a href="https://wrixton.net">wrixton.net</a>, <a href="https://wrixton.com">wrixton.com</a>, and <a href="https://wrixton.xyz">wrixton.xyz</a> for {(new Date().getFullYear() - 2010)} years using a host service to learn about web hosting and programming</>,
                         'Created blog and fraternity website using WordPress and phpBB to build codeless sites with tools',
                         'Realized about source control and merging by using bitbucket and github for Git source control which helped']} />
 

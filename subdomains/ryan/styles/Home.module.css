@@ -50,7 +50,7 @@
   width: 100%;
   margin-right: 1em;
   padding-right: 1em;
-  margin-bottom: 1em;
+  margin-bottom: .5em;
 }
 
 .rightSide {
@@ -101,4 +101,14 @@
 
 .date {
   float: right;
+}
+
+.title h3 {
+  display: inline;
+  padding-right: .25em;
+}
+
+.title h6 {
+  font-weight: normal;
+  display: inline;
 }

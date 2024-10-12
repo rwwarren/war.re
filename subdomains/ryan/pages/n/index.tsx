@@ -21,9 +21,8 @@ export default function Home() {
               </div>
               <Experience heading={"Technical Experience"}/>
               <ActivityList items={
-                  ['Programming experience with Java, git, Bash, Linux, Scala, PHP, Apache, MySQL, Go, React, Ruby, and C++',
-                      'Desire to develop more web & mobile programming experience',
-                      'Favorite editors are vim, IntelliJ & vscode']} />
+                  ['Experience using Java, Ruby, React, Scala, Go, PHP, C++, git, Bash, MySQL, PostgreSQL using Vim, IntelliJ & vscode',
+                      'Excited by backend and fullstack development, with a curiousity for security']} />
               <Experience heading={"Relevant Work Experience"}/>
               <Activity name={"Software Engineer, Stripe (Internal Tools)"} start={"March 2021"} end={"Present"}
                 items={['Internal Tools for Stripes to complete their jobs']}

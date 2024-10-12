@@ -23,7 +23,7 @@ export default function Activity(props: ActivityProps) {
             months = `${durationInterval.months} ${pluralize('Month', durationInterval.months)}`
         }
         const totalDuration = [years, months].join(" ").trim()
-        duration = <h6>[{totalDuration}]</h6>;
+        duration = <>[{totalDuration}]</>;
     }
     return (
         <div className={styles.activity}>

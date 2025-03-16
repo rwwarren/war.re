@@ -23,10 +23,10 @@ export default function Home() {
                 <h2>Software Engineer</h2>
             </div>
             <div className={styles.info}>
-                Hi! I am Seattle Software Engineer currently working for <Link href="https://stripe.com/">Stripe</Link>.
+                Hi! I am Seattle based Software Engineer currently working for <Link href="https://stripe.com/">Stripe</Link>.
             </div>
             <div className={styles.info}>
-                I am currently working on a random projects. Click <Link href="https://wrixton.xyz/">here</Link> to check it out.
+                I am currently working on random projects. Click <Link href="https://wrixton.xyz/">here</Link> to check it out.
             </div>
             <div className={styles.info}>
                 If you would like to learn a little more, see my <Link href="https://ryan.war.re/n">resume</Link>.

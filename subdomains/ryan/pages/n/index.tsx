@@ -21,10 +21,13 @@ export default function Home() {
               </div>
               <Experience heading={"Technical Experience"}/>
               <ActivityList items={
-                  ['Experience using Java, Ruby, React, Scala, Go, PHP, C++, git, Bash, MySQL, PostgreSQL using Vim, IntelliJ & vscode',
+                  ['Experience using Java, Ruby, React, Scala, Go, PHP, C++, git, Bash, MySQL, PostgreSQL using Cursor, Vim, IntelliJ & vscode',
                       'Excited by backend and fullstack development, with a curiousity for security']} />
               <Experience heading={"Relevant Work Experience"}/>
-              <Activity name={"Software Engineer, Stripe (Internal Tools)"} start={"March 2021"} end={"Present"}
+              <Activity name={"Senior Software Engineer, Stripe (Internal Tools)"} start={"March 2024"} end={"Present"}
+                items={['Internal Tools for Stripes to complete their jobs']}
+                />
+                <Activity name={"Software Engineer II, Stripe (Internal Tools)"} start={"March 2021"} end={"February 2024"}
                 items={['Internal Tools for Stripes to complete their jobs']}
                 />
               <Activity name={"Software Engineer II, Amazon (Ads)"} start={"July 2019"} end={"February 2021"}

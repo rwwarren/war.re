@@ -23,16 +23,16 @@ export default function Home() {
                 <h2>Software Engineer</h2>
             </div>
             <div className={styles.info}>
-                Hi! I am Seattle based Software Engineer currently working for <Link href="https://stripe.com/">Stripe</Link>.
+                Hi! I am Seattle based Software Engineer currently working for <Link href="https://stripe.com/" target="_blank">Stripe</Link>.
             </div>
             <div className={styles.info}>
-                I am currently working on random projects. Click <Link href="https://wrixton.xyz/">here</Link> to check it out.
+                I am currently working on random projects. Click <Link href="https://wrixton.xyz/" target="_blank">here</Link> to check it out.
             </div>
             <div className={styles.info}>
-                If you would like to learn a little more, see my <Link href="https://ryan.war.re/n">resume</Link>.
+                If you would like to learn a little more, see my <Link href="https://ryan.war.re/n" target="_blank">resume</Link>.
             </div>
             <div className={styles.images}>
-                <Link href="https://github.com/rwwarren">
+                <Link href="https://github.com/rwwarren" target="_blank">
                     <Image
                         src="github.svg"
                         alt="Github link"
@@ -40,7 +40,7 @@ export default function Home() {
                         height={30}
                     />
                 </Link>
-                <Link href="https://linkedin.com/in/ryanwwarren">
+                <Link href="https://linkedin.com/in/ryanwwarren" target="_blank">
                     <Image
                         src="linkedin.svg"
                         alt="Linkedin link"
@@ -48,7 +48,7 @@ export default function Home() {
                         height={30}
                     />
                 </Link>
-                <Link href="http://stackoverflow.com/users/1879792/ryan-warren">
+                <Link href="http://stackoverflow.com/users/1879792/ryan-warren" target="_blank">
                     <Image
                         src="stackoverflow.svg"
                         alt="Stack Overflow link"

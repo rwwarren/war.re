@@ -7,9 +7,12 @@ import pluralize from "pluralize";
 
 type ActivityProps = {
     name: string | JSX.Element;
+    company?: string;
+    team?: string;
     start?: string;
     end: string;
     items: Array<string | JSX.Element>;
+    companyLink?: string;
 };
 export default function Activity(props: ActivityProps) {
     const [duration, setDuration] = useState<React.ReactNode>(null);
@@ -32,7 +35,7 @@ export default function Activity(props: ActivityProps) {
     }, [props.start, props.end]);
     return (
         <div className={styles.activity}>
-            <div className={styles.title}><h3>{props.name}</h3>{duration}</div>
+            <div className={styles.title}><h3>{props.name}{props.company ? `, ` : ''}{props.companyLink ? <a href={props.companyLink} target="_blank">{props.company}</a> : props.company}{props.team ? ` (${props.team})` : ''}</h3>{duration}</div>
             <div className={styles.date}>{props.start}{props.start && props.end ? ' - ': ''}{props.end}</div>
             <ActivityList items={props.items} />
         </div>

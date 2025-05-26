@@ -8,3 +8,4 @@ node_modules/
 root/js/Bundle.js
 nohup.out
 **/package-lock.json
+.DS_Store

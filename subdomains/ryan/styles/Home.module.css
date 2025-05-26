@@ -27,7 +27,7 @@
 
 .content {
   padding-top: 1em;
-  max-width: 850px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -111,4 +111,13 @@
 .title h6 {
   font-weight: normal;
   display: inline;
+}
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  .title {
+    width: 50%;
+  }
+  .title h6 {
+    white-space: nowrap;
+  }
 }

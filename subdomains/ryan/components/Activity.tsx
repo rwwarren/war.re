@@ -1,17 +1,17 @@
 "use client";
-import { useEffect, useState } from 'react';
+import { useEffect, useState, ReactNode } from 'react';
 import styles from '@/styles/Home.module.css'
 import ActivityList from "@/components/ActivityList";
 import { intervalToDuration, parse } from "date-fns";
 import pluralize from "pluralize";
 
 type ActivityProps = {
-    name: string | JSX.Element;
+    name: string | ReactNode;
     company?: string;
     team?: string;
     start?: string;
     end: string;
-    items: Array<string | JSX.Element>;
+    items: Array<string | ReactNode>;
     companyLink?: string;
 };
 export default function Activity(props: ActivityProps) {

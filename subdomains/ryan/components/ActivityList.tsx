@@ -1,7 +1,7 @@
 import {ReactNode} from "react";
 
 type ActivityListProps = {
-    items: Array<string | JSX.Element>;
+    items: Array<string | ReactNode>;
 };
 
 export default function ActivityList(props: ActivityListProps) {

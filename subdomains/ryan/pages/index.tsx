@@ -20,6 +20,10 @@ export default function Home() {
         <title>War.re</title>
         <meta name="description" content="Ryan Warren's Website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta property="og:url" content="ryan.war.re/n" />
+        <meta property="og:title" content="Ryan Warren Resume" />
+        <meta property="og:description" content="Currently: SDE @ Stripe" />
+        <meta property="og:image" content="https://war.re/favicon.ico" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>

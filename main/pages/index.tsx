@@ -19,6 +19,7 @@ export default function Home() {
       <Head>
         <title>War.re</title>
         <meta name="description" content="Ryan Warren's Website" />
+        <meta property="og:title" content="Ryan Warren's Software Engineer" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

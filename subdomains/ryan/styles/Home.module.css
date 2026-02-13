@@ -42,8 +42,9 @@
   margin-top: 0.5em;
 }
 
-.subline > span {
+.subline span {
   margin: 0;
+  font-size: inherit;
 }
 
 .main ul ul {

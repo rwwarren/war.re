@@ -27,8 +27,24 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Ryan Warren Resume</title>
-        <meta name="description" content="Ryan Warren's Website" />
+        <title>Ryan Warren - Resume</title>
+        <meta name="description" content="Ryan Warren - Senior Software Engineer at Stripe. Experienced in Java, Ruby, React, Scala, Go, and more." />
+        <meta name="robots" content="index, follow, noemailindex" />
+        <meta name="googlebot" content="index, follow, noemailindex" />
+        <link rel="canonical" href="https://ryan.war.re/n" />
+        <meta property="og:type" content="profile" />
+        <meta property="og:url" content="https://ryan.war.re/n" />
+        <meta property="og:title" content="Ryan Warren - Resume" />
+        <meta property="og:description" content="Senior Software Engineer at Stripe. Experienced in Java, Ruby, React, Scala, Go, and more." />
+        <meta property="profile:first_name" content="Ryan" />
+        <meta property="profile:last_name" content="Warren" />
+        <meta property="og:image" content="https://war.re/favicon.ico" />
+        <meta property="og:site_name" content="War.re" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Ryan Warren - Resume" />
+        <meta name="twitter:description" content="Senior Software Engineer at Stripe" />
+        <meta name="author" content="Ryan Warren" />
+        <meta name="keywords" content="Ryan Warren, Software Engineer, Stripe, Resume, Java, Ruby, React, Scala, Go, Seattle" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -36,7 +52,7 @@ export default function Home() {
           <div className={styles.content}>
               <div className={styles.header}>
                   <h1>Ryan Warren</h1>
-                  <ExperienceItem name="linkedin.com/in/ryanwwarren" url="https://www.linkedin.com/in/ryanwwarren" /><div className={styles.spacing}>•</div>ryan@war.re <div className={styles.spacing}>•</div> <ExperienceItem name="github.com/rwwarren" url="https://github.com/rwwarren" />
+                  <ExperienceItem name="linkedin.com/in/ryanwwarren" url="https://www.linkedin.com/in/ryanwwarren" /><div className={styles.spacing}>•</div><span data-nosnippet="">ryan@war.re</span> <div className={styles.spacing}>•</div> <ExperienceItem name="github.com/rwwarren" url="https://github.com/rwwarren" />
               </div>
               <Experience heading={"Technical Experience"}/>
               <ActivityList items={[

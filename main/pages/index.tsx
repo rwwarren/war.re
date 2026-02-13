@@ -19,10 +19,18 @@ export default function Home() {
       <Head>
         <title>War.re</title>
         <meta name="description" content="Ryan Warren's Website" />
-        <meta property="og:url" content="war.re/n" />
-        <meta property="og:title" content="Ryan Warren's Software Engineer" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <link rel="canonical" href="https://war.re/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://war.re/n" />
+        <meta property="og:title" content="Ryan Warren - Software Engineer" />
         <meta property="og:description" content="Seattle based SDE @ Stripe" />
         <meta property="og:image" content="https://war.re/favicon.ico" />
+        <meta property="og:site_name" content="War.re" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Ryan Warren - Software Engineer" />
+        <meta name="twitter:description" content="Seattle based SDE @ Stripe" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

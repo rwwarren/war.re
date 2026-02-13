@@ -52,8 +52,12 @@ export default function Home() {
           <div className={styles.content}>
               <div className={styles.header}>
                   <h1>Ryan Warren</h1>
-                  <div class="subline">
-                    <ExperienceItem name="linkedin.com/in/ryanwwarren" url="https://www.linkedin.com/in/ryanwwarren" /><span>•</span><div data-nosnippet>ryan@war.re</div> <span>•</span> <ExperienceItem name="github.com/rwwarren" url="https://github.com/rwwarren" />
+                  <div className={styles.subline}>
+                    <ExperienceItem name="linkedin.com/in/ryanwwarren" url="https://www.linkedin.com/in/ryanwwarren" />
+                    <span>•</span>
+                    <div data-nosnippet>ryan@war.re</div>
+                    <span>•</span>
+                    <ExperienceItem name="github.com/rwwarren" url="https://github.com/rwwarren" />
                   </div>
               </div>
               <Experience heading={"Technical Experience"}/>

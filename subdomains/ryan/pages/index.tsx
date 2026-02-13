@@ -17,13 +17,22 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>War.re</title>
-        <meta name="description" content="Ryan Warren's Website" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta property="og:url" content="ryan.war.re/n" />
+        <title>Ryan Warren - Resume</title>
+        <meta name="description" content="Ryan Warren's Resume - Senior Software Engineer at Stripe" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <link rel="canonical" href="https://ryan.war.re/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ryan.war.re/n" />
         <meta property="og:title" content="Ryan Warren Resume" />
-        <meta property="og:description" content="Currently: SDE @ Stripe" />
+        <meta property="og:description" content="Senior Software Engineer at Stripe" />
         <meta property="og:image" content="https://war.re/favicon.ico" />
+        <meta property="og:site_name" content="War.re" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Ryan Warren Resume" />
+        <meta name="twitter:description" content="Senior Software Engineer at Stripe" />
+        <meta name="author" content="Ryan Warren" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>

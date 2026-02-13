@@ -9,8 +9,21 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>War.re</title>
-        <meta name="description" content="Ryan Warren's Website" />
+        <title>War.re - Ryan Warren</title>
+        <meta name="description" content="Ryan Warren - Seattle based Software Engineer currently working at Stripe" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <link rel="canonical" href="https://war.re/n" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://war.re/n" />
+        <meta property="og:title" content="Ryan Warren - Software Engineer" />
+        <meta property="og:description" content="Seattle based Software Engineer currently working at Stripe" />
+        <meta property="og:image" content="https://war.re/favicon.ico" />
+        <meta property="og:site_name" content="War.re" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Ryan Warren - Software Engineer" />
+        <meta name="twitter:description" content="Seattle based Software Engineer currently working at Stripe" />
+        <meta name="author" content="Ryan Warren" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

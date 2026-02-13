@@ -27,8 +27,22 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Ryan Warren Resume</title>
-        <meta name="description" content="Ryan Warren's Website" />
+        <title>Ryan Warren - Resume</title>
+        <meta name="description" content="Ryan Warren - Senior Software Engineer at Stripe. Experienced in Java, Ruby, React, Scala, Go, and more." />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <link rel="canonical" href="https://ryan.war.re/n" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ryan.war.re/n" />
+        <meta property="og:title" content="Ryan Warren - Resume" />
+        <meta property="og:description" content="Senior Software Engineer at Stripe. Experienced in Java, Ruby, React, Scala, Go, and more." />
+        <meta property="og:image" content="https://war.re/favicon.ico" />
+        <meta property="og:site_name" content="War.re" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Ryan Warren - Resume" />
+        <meta name="twitter:description" content="Senior Software Engineer at Stripe" />
+        <meta name="author" content="Ryan Warren" />
+        <meta name="keywords" content="Ryan Warren, Software Engineer, Stripe, Resume, Java, Ruby, React, Scala, Go, Seattle" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

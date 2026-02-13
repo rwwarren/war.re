@@ -42,14 +42,12 @@
   margin-top: 0.5em;
 }
 
-.main ul ul {
-  list-style: disc inside;
+.subline > span {
+  margin-right: 0;
 }
 
-.spacing {
-  display: inline;
-  margin-left: .7em;
-  margin-right: .7em;
+.main ul ul {
+  list-style: disc inside;
 }
 
 .activity {

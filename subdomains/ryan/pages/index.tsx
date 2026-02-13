@@ -19,10 +19,10 @@ export default function Home() {
       <Head>
         <title>Ryan Warren - Resume</title>
         <meta name="description" content="Ryan Warren's Resume - Senior Software Engineer at Stripe" />
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
+        <meta name="robots" content="index, follow, noemailindex" />
+        <meta name="googlebot" content="index, follow, noemailindex" />
         <link rel="canonical" href="https://ryan.war.re/" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://ryan.war.re/n" />
         <meta property="og:title" content="Ryan Warren Resume" />
         <meta property="og:description" content="Senior Software Engineer at Stripe" />

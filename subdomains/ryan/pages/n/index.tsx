@@ -29,13 +29,15 @@ export default function Home() {
       <Head>
         <title>Ryan Warren - Resume</title>
         <meta name="description" content="Ryan Warren - Senior Software Engineer at Stripe. Experienced in Java, Ruby, React, Scala, Go, and more." />
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
+        <meta name="robots" content="index, follow, noemailindex" />
+        <meta name="googlebot" content="index, follow, noemailindex" />
         <link rel="canonical" href="https://ryan.war.re/n" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://ryan.war.re/n" />
         <meta property="og:title" content="Ryan Warren - Resume" />
         <meta property="og:description" content="Senior Software Engineer at Stripe. Experienced in Java, Ruby, React, Scala, Go, and more." />
+        <meta property="profile:first_name" content="Ryan" />
+        <meta property="profile:last_name" content="Warren" />
         <meta property="og:image" content="https://war.re/favicon.ico" />
         <meta property="og:site_name" content="War.re" />
         <meta name="twitter:card" content="summary" />
@@ -50,7 +52,7 @@ export default function Home() {
           <div className={styles.content}>
               <div className={styles.header}>
                   <h1>Ryan Warren</h1>
-                  <ExperienceItem name="linkedin.com/in/ryanwwarren" url="https://www.linkedin.com/in/ryanwwarren" /><div className={styles.spacing}>•</div>ryan@war.re <div className={styles.spacing}>•</div> <ExperienceItem name="github.com/rwwarren" url="https://github.com/rwwarren" />
+                  <ExperienceItem name="linkedin.com/in/ryanwwarren" url="https://www.linkedin.com/in/ryanwwarren" /><div className={styles.spacing}>•</div><span data-nosnippet="">ryan@war.re</span> <div className={styles.spacing}>•</div> <ExperienceItem name="github.com/rwwarren" url="https://github.com/rwwarren" />
               </div>
               <Experience heading={"Technical Experience"}/>
               <ActivityList items={[

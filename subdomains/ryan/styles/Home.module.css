@@ -35,14 +35,14 @@
   text-align: center;
 }
 
-.main ul ul {
-  list-style: disc inside;
+.subline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
 }
 
-.spacing {
-  display: inline;
-  margin-left: .7em;
-  margin-right: .7em;
+.main ul ul {
+  list-style: disc inside;
 }
 
 .activity {
@@ -111,6 +111,11 @@
 .title h6 {
   font-weight: normal;
   display: inline;
+}
+
+.subline span {
+  margin: 0;
+  font-size: inherit;
 }
 
 @media screen and (min-width: 300px) and (max-width: 768px) {

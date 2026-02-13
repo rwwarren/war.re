@@ -52,7 +52,7 @@ export default function Home() {
           <div className={styles.content}>
               <div className={styles.header}>
                   <h1>Ryan Warren</h1>
-                  <ExperienceItem name="linkedin.com/in/ryanwwarren" url="https://www.linkedin.com/in/ryanwwarren" /><div className={styles.spacing}>•</div><span data-nosnippet="">ryan@war.re</span> <div className={styles.spacing}>•</div> <ExperienceItem name="github.com/rwwarren" url="https://github.com/rwwarren" />
+                  <ExperienceItem name="linkedin.com/in/ryanwwarren" url="https://www.linkedin.com/in/ryanwwarren" /><div className={styles.spacing}>•</div><div data-nosnippet>ryan@war.re</div> <div className={styles.spacing}>•</div> <ExperienceItem name="github.com/rwwarren" url="https://github.com/rwwarren" />
               </div>
               <Experience heading={"Technical Experience"}/>
               <ActivityList items={[

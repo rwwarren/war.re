@@ -42,11 +42,6 @@
   margin-top: 0.5em;
 }
 
-.subline span {
-  margin: 0;
-  font-size: inherit;
-}
-
 .main ul ul {
   list-style: disc inside;
 }
@@ -117,6 +112,11 @@
 .title h6 {
   font-weight: normal;
   display: inline;
+}
+
+.subline span {
+  margin: 0;
+  font-size: inherit;
 }
 
 @media screen and (min-width: 300px) and (max-width: 768px) {

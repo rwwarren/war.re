@@ -35,6 +35,13 @@
   text-align: center;
 }
 
+.subline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-top: 0.5em;
+}
+
 .main ul ul {
   list-style: disc inside;
 }

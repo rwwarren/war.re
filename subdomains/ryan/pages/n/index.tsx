@@ -55,7 +55,7 @@ export default function Home() {
                   <div className={styles.subline}>
                     <ExperienceItem name="linkedin.com/in/ryanwwarren" url="https://www.linkedin.com/in/ryanwwarren" />
                     <span>•</span>
-                    <div data-nosnippet>ryan@war.re</div>
+                    <span data-nosnippet>ryan@war.re</span>
                     <span>•</span>
                     <ExperienceItem name="github.com/rwwarren" url="https://github.com/rwwarren" />
                   </div>

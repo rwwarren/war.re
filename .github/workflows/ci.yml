@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main, 'claude/**']
+  pull_request:
+    branches: [main]
+
+jobs:
+  main-site:
+    name: Main Site (war.re)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: main
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+          cache-dependency-path: main/yarn.lock
+      - run: yarn install --frozen-lockfile
+      - run: yarn lint
+      - run: yarn build
+
+  ryan-site:
+    name: Ryan Subdomain (ryan.war.re)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: subdomains/ryan
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+          cache-dependency-path: subdomains/ryan/yarn.lock
+      - run: yarn install --frozen-lockfile
+      - run: yarn test --ci
+      - run: yarn lint
+      - run: yarn build

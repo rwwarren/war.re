@@ -20,6 +20,7 @@ export default function Home() {
     { name: 'PostgreSQL', url: 'https://www.postgresql.org/' }
   ];
   const editors: ExperienceItemProps[] = [
+    { name: 'Claude Code', url: 'https://claude.ai/code' },
     { name: 'Cursor', url: 'https://cursor.sh' },
     { name: 'Vim', url: 'https://www.vim.org/' },
     { name: 'IntelliJ', url: 'https://www.jetbrains.com/idea/' }

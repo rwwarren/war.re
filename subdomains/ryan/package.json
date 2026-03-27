@@ -14,8 +14,8 @@
     "@types/react-dom": "19.2.3",
     "date-fns": "^4.1.0",
     "eslint": "9.39.2",
-    "eslint-config-next": "15.5.12",
-    "next": "15.5.12",
+    "eslint-config-next": "15.5.14",
+    "next": "15.5.14",
     "pluralize": "^8.0.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
@@ -23,5 +23,11 @@
   },
   "devDependencies": {
     "@types/pluralize": "^0.0.33"
+  },
+  "resolutions": {
+    "ajv": "^6.14.0",
+    "flatted": "^3.4.2",
+    "js-yaml": "^4.1.1",
+    "nanoid": "^3.3.11"
   }
 }

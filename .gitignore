@@ -9,5 +9,5 @@ root/js/Bundle.js
 nohup.out
 **/package-lock.json
 .DS_Store
-main/.next/
-*/next-env.d.ts
+**/.next/
+**/next-env.d.ts

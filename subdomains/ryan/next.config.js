@@ -3,12 +3,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  async redirects() {
+  async rewrites() {
     return [
       {
         source: '/',
         destination: '/n',
-        permanent: true,
       },
     ]
   }

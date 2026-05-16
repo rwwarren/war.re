@@ -41,6 +41,7 @@ jobs:
           cache: 'yarn'
           cache-dependency-path: main/yarn.lock
       - run: yarn install --frozen-lockfile
+      - run: yarn format:check
       - run: yarn lint
       - run: yarn typecheck
       - run: yarn build
@@ -62,6 +63,19 @@ jobs:
           cache-dependency-path: subdomains/ryan/yarn.lock
       - run: yarn install --frozen-lockfile
       - run: yarn test --ci
+      - run: yarn format:check
       - run: yarn lint
       - run: yarn typecheck
       - run: yarn build
+
+  ci-passed:
+    name: CI Passed
+    needs: [main-site, ryan-site]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail if any upstream job failed
+        if: contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')
+        run: exit 1
+      - name: Success
+        run: echo "All required jobs passed or were skipped."

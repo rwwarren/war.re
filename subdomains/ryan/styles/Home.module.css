@@ -5,20 +5,20 @@
 
 .main p {
   margin-top: 0;
-  margin-bottom: .35em;
+  margin-bottom: 0.35em;
 }
 
 .main h1 {
   font: 1.8em Verdana;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .main h2 {
   font: Bold 1.2em Verdana;
   text-transform: uppercase;
-  border-bottom:1px #dddddd solid;
-  margin-top: 1.0em;
-  margin-bottom: .35em;
+  border-bottom: 1px #dddddd solid;
+  margin-top: 1em;
+  margin-bottom: 0.35em;
 }
 
 .main h3 {
@@ -50,7 +50,7 @@
   width: 100%;
   margin-right: 1em;
   padding-right: 1em;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .rightSide {
@@ -61,13 +61,13 @@
 }
 
 .for {
-  font: bold 1.0em verdana;
+  font: bold 1em verdana;
   text-transform: uppercase;
 }
 
 .main span {
   font-weight: normal;
-  font-size: .8em;
+  font-size: 0.8em;
   text-transform: none;
   float: right;
   margin-right: 1em;
@@ -80,17 +80,17 @@
 }
 
 .as {
-  font: normal 1.0em verdana;
+  font: normal 1em verdana;
 }
 
 .main ul {
-  margin-left: .5em;
-  margin-right: .5em;
-  padding-left: .5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  padding-left: 0.5em;
 }
 
 .main li {
-  margin-bottom: .2em;
+  margin-bottom: 0.2em;
   clear: both;
 }
 
@@ -105,7 +105,7 @@
 
 .title h3 {
   display: inline;
-  padding-right: .25em;
+  padding-right: 0.25em;
 }
 
 .title h6 {

@@ -5,15 +5,14 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
 import { useRouter } from 'next/router'
-import Link from "next/link";
-
+import Link from 'next/link'
 
 export default function Home() {
-    const router = useRouter()
-    useEffect(() => {
-        // Always do navigations after the first render
-        router.push('/n', undefined, { shallow: true })
-    }, [])
+  const router = useRouter()
+  useEffect(() => {
+    // Always do navigations after the first render
+    router.push('/n', undefined, { shallow: true })
+  }, [])
   return (
     <>
       <Head>
@@ -26,16 +25,17 @@ export default function Home() {
         <meta property="og:url" content="https://war.re/n" />
         <meta property="og:title" content="Ryan Warren - Software Engineer" />
         <meta property="og:description" content="Seattle based SDE @ Stripe" />
-        <meta property="og:image" content="https://war.re/favicon.ico" />
+        <meta property="og:image" content="https://war.re/og.svg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="War.re" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Ryan Warren - Software Engineer" />
         <meta name="twitter:description" content="Seattle based SDE @ Stripe" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-          <Link href="/n">Click here to go to the main site</Link>
+        <Link href="/n">Click here to go to the main site</Link>
       </main>
     </>
   )

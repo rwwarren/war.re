@@ -1,13 +1,11 @@
 *.log
 *.log~
 *.swp
-.gitignore
-subdomains/doorlock-example/*
 .idea/
 node_modules/
-root/js/Bundle.js
 nohup.out
 **/package-lock.json
 .DS_Store
 **/.next/
 **/next-env.d.ts
+**/*.tsbuildinfo

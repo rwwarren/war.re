@@ -31,7 +31,7 @@
 }
 
 .images img:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .info a {
@@ -39,13 +39,11 @@
 }
 
 .title {
-
 }
 
 .subtitle {
-
 }
-.subtitle h2{
+.subtitle h2 {
   font-weight: normal;
 }
 
@@ -60,12 +58,12 @@
 }
 
 .info {
-  padding-top: .5em;
+  padding-top: 0.5em;
   font-size: 1.1em;
 }
 
 .images {
-  padding-top: .5em;
+  padding-top: 0.5em;
 }
 
 .images img {

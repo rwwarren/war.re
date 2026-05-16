@@ -34,34 +34,34 @@ export default function Home() {
                 <h2>Software Engineer</h2>
             </div>
             <div className={styles.info}>
-                Hi! I am Seattle based Software Engineer currently working for <Link href="https://stripe.com/" target="_blank">Stripe</Link>.
+                Hi! I am Seattle based Software Engineer currently working for <Link href="https://stripe.com/" target="_blank" rel="noopener noreferrer">Stripe</Link>.
             </div>
             <div className={styles.info}>
-                I am currently working on random projects. Click <Link href="https://wrixton.xyz/" target="_blank">here</Link> to check it out.
+                I am currently working on random projects. Click <Link href="https://wrixton.xyz/" target="_blank" rel="noopener noreferrer">here</Link> to check it out.
             </div>
             <div className={styles.info}>
-                If you would like to learn a little more, see my <Link href="https://ryan.war.re/n" target="_blank">resume</Link>.
+                If you would like to learn a little more, see my <Link href="https://ryan.war.re/n" target="_blank" rel="noopener noreferrer">resume</Link>.
             </div>
             <div className={styles.images}>
-                <Link href="https://github.com/rwwarren" target="_blank">
+                <Link href="https://github.com/rwwarren" target="_blank" rel="noopener noreferrer">
                     <Image
-                        src="github.svg"
+                        src="/github.svg"
                         alt="Github link"
                         width={30}
                         height={30}
                     />
                 </Link>
-                <Link href="https://linkedin.com/in/ryanwwarren" target="_blank">
+                <Link href="https://linkedin.com/in/ryanwwarren" target="_blank" rel="noopener noreferrer">
                     <Image
-                        src="linkedin.svg"
+                        src="/linkedin.svg"
                         alt="Linkedin link"
                         width={30}
                         height={30}
                     />
                 </Link>
-                <Link href="http://stackoverflow.com/users/1879792/ryan-warren" target="_blank">
+                <Link href="http://stackoverflow.com/users/1879792/ryan-warren" target="_blank" rel="noopener noreferrer">
                     <Image
-                        src="stackoverflow.svg"
+                        src="/stackoverflow.svg"
                         alt="Stack Overflow link"
                         width={30}
                         height={30}

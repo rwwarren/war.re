@@ -15,6 +15,7 @@ yarn build
 ## Notes
 
 - Pages router (`pages/`)
-- `/` is rewritten to `/n` via `next.config.js`
+- Static export (`output: 'export'` in `next.config.js`) — `yarn build` writes `out/`
+- `/` is a static page that meta-refreshes to `/n`
 - Path alias `@/*` → project root
 - Jest + Testing Library for component tests

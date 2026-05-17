@@ -1,26 +1,16 @@
-import { useEffect } from 'react'
-
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-
-import { useRouter } from 'next/router'
 import Link from 'next/link'
 
 export default function Home() {
-  const router = useRouter()
-  useEffect(() => {
-    // Always do navigations after the first render
-    router.push('/n', undefined, { shallow: true })
-  }, [])
   return (
     <>
       <Head>
+        <meta httpEquiv="refresh" content="0; url=/n" />
         <title>War.re</title>
         <meta name="description" content="Ryan Warren's Website" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
-        <link rel="canonical" href="https://war.re/" />
+        <link rel="canonical" href="https://war.re/n" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://war.re/n" />
         <meta property="og:title" content="Ryan Warren - Software Engineer" />
@@ -34,9 +24,9 @@ export default function Home() {
         <meta name="twitter:description" content="Seattle based SDE @ Stripe" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <noscript>
         <Link href="/n">Click here to go to the main site</Link>
-      </main>
+      </noscript>
     </>
   )
 }

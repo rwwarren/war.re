@@ -37,9 +37,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.center}>
-          <div className={styles.title}>
-            <h1>Ryan Warren</h1>
-          </div>
+          <h1>Ryan Warren</h1>
           <div className={styles.subtitle}>
             <h2>Software Engineer</h2>
           </div>

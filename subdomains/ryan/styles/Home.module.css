@@ -53,34 +53,12 @@
   margin-bottom: 0.5em;
 }
 
-.rightSide {
-  float: left;
-  width: 50%;
-  margin-bottom: 1em;
-  margin-left: 1em;
-}
-
-.for {
-  font: bold 1em verdana;
-  text-transform: uppercase;
-}
-
 .main span {
   font-weight: normal;
   font-size: 0.8em;
   text-transform: none;
   float: right;
   margin-right: 1em;
-}
-
-.for span {
-  font-weight: normal;
-  text-transform: none;
-  float: right;
-}
-
-.as {
-  font: normal 1em verdana;
 }
 
 .main ul {
@@ -116,6 +94,21 @@
 .subline span {
   margin: 0;
   font-size: inherit;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 4rem 0;
+  max-width: 40em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info {
+  padding-top: 0.5em;
+  font-size: 1.1em;
 }
 
 @media screen and (min-width: 300px) and (max-width: 768px) {

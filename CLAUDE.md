@@ -1,10 +1,10 @@
 # war.re
 
-Multi-domain URL shortener and personal site. Next.js app with subdomain routing.
+Multi-domain URL shortener and personal site. One independent Next.js app per domain.
 
 ## Stack
 
-- **Framework**: Next.js 15 (React 19)
+- **Framework**: Next.js 16 (React 19)
 - **Language**: TypeScript
 - **Package manager**: yarn
 - **Lint**: ESLint (next/core-web-vitals)
@@ -12,18 +12,20 @@ Multi-domain URL shortener and personal site. Next.js app with subdomain routing
 ## Commands
 
 ```bash
-yarn dev      # Dev server at localhost:3000
-yarn build    # Production build
-yarn start    # Production server
-yarn lint     # ESLint
+# run inside an app dir: main/ or subdomains/ryan/
+yarn dev        # dev server at localhost:3000
+yarn build      # static export to out/
+yarn lint       # ESLint
+yarn typecheck  # tsc --noEmit
+yarn format     # Prettier --write (format:check to verify)
+yarn test       # Jest — subdomains/ryan only
 ```
 
 ## Structure
 
-- `main/` — primary Next.js app (pages router)
-- `subdomains/ryan/` — subdomain-specific content
-- URL rewrite: `/` redirects to `/n` (main content route)
-- API routes under `pages/api/`
+- `main/` — Next.js app for war.re (pages router)
+- `subdomains/ryan/` — Next.js app for the ryan.war.re resume
+- `/` meta-refreshes to `/n` (the content route) — static export, no server rewrites
 
 ## Conventions
 
@@ -31,6 +33,6 @@ yarn lint     # ESLint
 - Custom `_app.tsx` and `_document.tsx` wrappers
 - Path alias `@/*` maps to project root
 - React Strict Mode enabled
-- No test suite currently configured
+- Tests: `subdomains/ryan/` uses Jest + React Testing Library; `main/` has none
 
 See `~/CLAUDE.md` for global conventions.

@@ -1,0 +1,4 @@
+.next/
+out/
+yarn.lock
+next-env.d.ts

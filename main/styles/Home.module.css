@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6rem;
+  padding: clamp(1.25rem, 6vw, 6rem);
   min-height: 100vh;
 }
 
@@ -31,7 +31,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 4rem 0;
+  padding: clamp(1.5rem, 6vw, 4rem) 0;
   max-width: 40em;
   margin-left: auto;
   margin-right: auto;

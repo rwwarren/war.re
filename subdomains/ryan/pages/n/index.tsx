@@ -68,9 +68,13 @@ export default function Home() {
                 name="linkedin.com/in/ryanwwarren"
                 url="https://www.linkedin.com/in/ryanwwarren"
               />
-              <span>•</span>
+              <span className={styles.dot} aria-hidden="true">
+                •
+              </span>
               <span data-nosnippet>ryan@war.re</span>
-              <span>•</span>
+              <span className={styles.dot} aria-hidden="true">
+                •
+              </span>
               <ExperienceItem name="github.com/rwwarren" url="https://github.com/rwwarren" />
             </div>
           </div>

@@ -120,6 +120,13 @@
   .main h1 {
     font-size: 2em;
   }
+  .subline {
+    flex-direction: column;
+    gap: 0.25em;
+  }
+  .subline .dot {
+    display: none;
+  }
   .title {
     flex-basis: 100%;
   }

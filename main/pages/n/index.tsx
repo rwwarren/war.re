@@ -81,8 +81,8 @@ export default function Home() {
               <Image src="/stackoverflow.svg" alt="Stack Overflow link" width={30} height={30} />
             </Link>
           </div>
-          <div className={styles.footer}>&copy; {new Date().getFullYear()} war.re</div>
         </div>
+        <div className={styles.footer}>&copy; {new Date().getFullYear()} war.re</div>
       </main>
     </>
   )

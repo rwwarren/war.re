@@ -94,7 +94,7 @@ export default function Home() {
                 ])}{' '}
                 & {<ExperienceItem name="vscode" url="https://code.visualstudio.com/" />}
               </>,
-              'Excited by backend and fullstack development, with a curiousity for security',
+              'Excited by building platforms across backend and fullstack development, with a curiosity for security and AI',
             ]}
           />
           <Experience heading={'Relevant Work Experience'} />

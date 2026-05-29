@@ -68,9 +68,13 @@ export default function Home() {
                 name="linkedin.com/in/ryanwwarren"
                 url="https://www.linkedin.com/in/ryanwwarren"
               />
-              <span>•</span>
+              <span className={styles.dot} aria-hidden="true">
+                •
+              </span>
               <span data-nosnippet>ryan@war.re</span>
-              <span>•</span>
+              <span className={styles.dot} aria-hidden="true">
+                •
+              </span>
               <ExperienceItem name="github.com/rwwarren" url="https://github.com/rwwarren" />
             </div>
           </div>
@@ -90,7 +94,7 @@ export default function Home() {
                 ])}{' '}
                 & {<ExperienceItem name="vscode" url="https://code.visualstudio.com/" />}
               </>,
-              'Excited by backend and fullstack development, with a curiousity for security',
+              'Excited by backend and full stack platform development, with a curiosity for security and AI',
             ]}
           />
           <Experience heading={'Relevant Work Experience'} />

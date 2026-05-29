@@ -45,6 +45,10 @@ jobs:
       - run: yarn lint
       - run: yarn typecheck
       - run: yarn build
+      - name: Install Playwright browser
+        run: yarn playwright install --with-deps chromium
+      - name: UI smoke tests
+        run: yarn e2e
 
   ryan-site:
     name: Ryan Subdomain (ryan.war.re)
@@ -67,6 +71,10 @@ jobs:
       - run: yarn lint
       - run: yarn typecheck
       - run: yarn build
+      - name: Install Playwright browser
+        run: yarn playwright install --with-deps chromium
+      - name: UI smoke tests
+        run: yarn e2e
 
   ci-passed:
     name: CI Passed

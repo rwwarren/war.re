@@ -1,17 +1,18 @@
 name: PR screenshots
 
-# Stage 1 of 2: build both apps and capture desktop + mobile screenshots of the
-# /n content route, then upload them as an artifact. This runs on the PR head
-# (including Dependabot and fork PRs) with a READ-ONLY token and no secrets, so
-# it is safe even when building untrusted dependency code. The screenshots are
-# published to the PR by the companion `pr-screenshots-comment.yml` workflow,
-# which never executes PR code.
+# Builds both apps and captures desktop + mobile screenshots of the /n content
+# route. For same-repo PRs (e.g. the owner's branches) the token is writable, so
+# this workflow publishes the inline comment directly — that includes the PR
+# that introduces this workflow. Dependabot and fork PRs get a read-only token
+# here, so their comment is posted by the companion `pr-screenshots-comment.yml`
+# workflow, which runs in the trusted base context and never executes PR code.
 
 on:
   pull_request:
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
 
 jobs:
   capture:
@@ -52,8 +53,19 @@ jobs:
       - name: Record PR number
         run: echo "${{ github.event.pull_request.number }}" > "$GITHUB_WORKSPACE/screenshots/pr-number.txt"
 
+      # For Dependabot / fork PRs the companion workflow posts the comment.
       - uses: actions/upload-artifact@v4
         with:
           name: pr-screenshots
           path: screenshots/
           retention-days: 7
+
+      # Same-repo PRs have a writable token, so comment inline right away.
+      - name: Publish screenshots comment
+        if: github.actor != 'dependabot[bot]' && github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.pull_request.number }}
+          SHA: ${{ github.event.pull_request.head.sha }}
+        run: bash scripts/post-screenshots.sh

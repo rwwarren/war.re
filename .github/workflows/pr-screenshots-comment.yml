@@ -41,6 +41,21 @@ jobs:
           REPO: ${{ github.repository }}
           SHA: ${{ github.event.workflow_run.head_sha }}
         run: |
+          set -euo pipefail
+          # pr-number.txt comes from the untrusted PR build (fork PRs control it),
+          # so validate it before using it to target a comment / branch dir.
           PR=$(cat screenshots/pr-number.txt)
+          if ! printf '%s' "$PR" | grep -Eq '^[0-9]+$'; then
+            echo "::error::Invalid PR number in artifact: '${PR}'"
+            exit 1
+          fi
+          # Bind the claimed PR to the commit that was actually built: confirm the
+          # PR's head SHA matches this workflow_run's head SHA so a fork cannot
+          # redirect the screenshots to an unrelated PR.
+          HEAD_SHA=$(gh api "repos/${REPO}/pulls/${PR}" --jq '.head.sha')
+          if [ "$HEAD_SHA" != "$SHA" ]; then
+            echo "::error::PR #${PR} head (${HEAD_SHA}) does not match built commit (${SHA})"
+            exit 1
+          fi
           export PR
           bash scripts/post-screenshots.sh

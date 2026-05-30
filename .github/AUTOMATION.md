@@ -52,6 +52,29 @@ gh api -X PATCH repos/rwwarren/war.re/branches/main/protection \
   -F restrictions=
 ```
 
+## PR preview screenshots
+
+Every PR (including Dependabot) gets desktop + mobile screenshots of both apps'
+`/n` page posted as an auto-updating inline comment. Two workflows implement
+this with the secure split GitHub recommends for commenting on untrusted PRs:
+
+- `pr-screenshots.yml` — runs on `pull_request` with a **read-only** token,
+  builds both apps, captures screenshots via `scripts/screenshot.mjs`, and
+  uploads them as an artifact. Safe to run on untrusted PR code.
+- `pr-screenshots-comment.yml` — runs on `workflow_run` in the trusted base
+  context with a **write** token but never checks out PR code. It commits the
+  images to the orphan `pr-screenshots` branch and posts/updates the comment.
+
+Notes:
+
+- Inline images are served from `raw.githubusercontent.com`, which **requires
+  the repo to be public**. For a private repo, read the screenshots from the
+  `pr-screenshots` artifact on the "PR screenshots" run instead.
+- `workflow_run` workflows execute from the **default branch**, so the inline
+  comment only starts appearing once this change is merged to `main`. The PR
+  that introduces it will produce the artifact but not the comment.
+- The `pr-screenshots` branch is data only — exclude it from branch protection.
+
 ## Tuning the policy
 
 - **Merge scope** — edit the `if:` condition in

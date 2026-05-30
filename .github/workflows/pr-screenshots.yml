@@ -1,0 +1,59 @@
+name: PR screenshots
+
+# Stage 1 of 2: build both apps and capture desktop + mobile screenshots of the
+# /n content route, then upload them as an artifact. This runs on the PR head
+# (including Dependabot and fork PRs) with a READ-ONLY token and no secrets, so
+# it is safe even when building untrusted dependency code. The screenshots are
+# published to the PR by the companion `pr-screenshots-comment.yml` workflow,
+# which never executes PR code.
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+          cache: 'yarn'
+          cache-dependency-path: |
+            main/yarn.lock
+            subdomains/ryan/yarn.lock
+
+      - name: Build main site
+        working-directory: main
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+
+      - name: Build ryan subdomain
+        working-directory: subdomains/ryan
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+
+      - name: Install Playwright browser
+        working-directory: main
+        run: yarn playwright install --with-deps chromium
+
+      - name: Capture screenshots
+        run: |
+          mkdir -p "$GITHUB_WORKSPACE/screenshots"
+          (cd main && node "$GITHUB_WORKSPACE/scripts/screenshot.mjs" "war.re" "$GITHUB_WORKSPACE/screenshots" 4001)
+          (cd subdomains/ryan && node "$GITHUB_WORKSPACE/scripts/screenshot.mjs" "ryan.war.re" "$GITHUB_WORKSPACE/screenshots" 4002)
+
+      - name: Record PR number
+        run: echo "${{ github.event.pull_request.number }}" > "$GITHUB_WORKSPACE/screenshots/pr-number.txt"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pr-screenshots
+          path: screenshots/
+          retention-days: 7

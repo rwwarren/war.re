@@ -28,6 +28,22 @@ fi
 rm -rf "pr-${PR}"
 mkdir -p "pr-${PR}/${SHORT}"
 cp ../screenshots/*.png "pr-${PR}/${SHORT}/"
+
+# Keep Vercel from trying to deploy this data-only branch. The configs sit in
+# the projects' Root Directories so Vercel both finds the dir (no "Root
+# Directory does not exist" error) and sees deployments are disabled here.
+mkdir -p main subdomains/ryan
+VERCEL_IGNORE='{
+  "git": {
+    "deploymentEnabled": {
+      "pr-screenshots": false
+    }
+  }
+}'
+printf '%s\n' "$VERCEL_IGNORE" > main/vercel.json
+printf '%s\n' "$VERCEL_IGNORE" > subdomains/ryan/vercel.json
+printf '%s\n' "$VERCEL_IGNORE" > vercel.json
+
 git add -A
 git commit -q -m "screenshots: PR #${PR} @ ${SHORT}"
 git push -q origin pr-screenshots

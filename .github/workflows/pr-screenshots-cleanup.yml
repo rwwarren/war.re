@@ -1,0 +1,42 @@
+name: PR screenshots cleanup
+
+# Removes a PR's screenshots from the pr-screenshots branch when the PR closes,
+# so the data branch does not accumulate images for old PRs.
+#
+# Uses pull_request_target purely for the write token on closed PRs (incl.
+# Dependabot). It never checks out or runs PR code — it only deletes a directory
+# on another branch — so there is no untrusted-code exposure.
+
+on:
+  pull_request_target:
+    types: [closed]
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      REPO: ${{ github.repository }}
+      PR: ${{ github.event.pull_request.number }}
+    steps:
+      - name: Remove screenshots for this PR
+        run: |
+          set -euo pipefail
+          REMOTE="https://x-access-token:${GH_TOKEN}@github.com/${REPO}.git"
+          if ! git clone --depth 1 --branch pr-screenshots "$REMOTE" branch 2>/dev/null; then
+            echo "No pr-screenshots branch yet; nothing to clean."
+            exit 0
+          fi
+          cd branch
+          if [ ! -d "pr-${PR}" ]; then
+            echo "No screenshots for PR #${PR}; nothing to clean."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm -rq "pr-${PR}"
+          git commit -q -m "screenshots: clean up PR #${PR}"
+          git push -q origin pr-screenshots

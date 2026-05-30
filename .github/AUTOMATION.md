@@ -71,6 +71,19 @@ this. The commenting path depends on whether the PR's token can write:
 
 Both paths share `scripts/post-screenshots.sh`, which commits the images to the
 orphan `pr-screenshots` branch and posts/updates a single sticky comment.
+`pr-screenshots-cleanup.yml` deletes a PR's images from that branch when the PR
+closes, so it does not accumulate old screenshots.
+
+### Keeping Vercel and branches tidy
+
+- The `pr-screenshots` branch holds no app, so Vercel must not try to deploy it.
+  `git.deploymentEnabled` in `main/vercel.json` and `subdomains/ryan/vercel.json`
+  disables that branch for both Vercel projects, and `post-screenshots.sh` writes
+  the same configs onto the branch itself (which also makes the projects' Root
+  Directories exist, avoiding the "Root Directory does not exist" build error).
+- Enable **Settings → General → Pull Requests → Automatically delete head
+  branches** so merged `claude/*` and Dependabot branches are removed instead of
+  lingering. (`gh api -X PATCH repos/rwwarren/war.re -f delete_branch_on_merge=true`)
 
 Notes:
 

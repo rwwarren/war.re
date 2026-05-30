@@ -16,6 +16,10 @@ permissions:
 
 jobs:
   capture:
+    # Same-repo PRs only (this includes Dependabot, whose branches live in the
+    # repo). Fork PRs are skipped entirely, so untrusted fork code is never
+    # built or run by this automation.
+    if: github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6

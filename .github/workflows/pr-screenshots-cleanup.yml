@@ -16,6 +16,9 @@ permissions:
 
 jobs:
   cleanup:
+    # Same-repo PRs only (matches the screenshot capture scope); forks never
+    # produce screenshots, so there is nothing to clean.
+    if: github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

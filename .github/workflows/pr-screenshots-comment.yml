@@ -1,8 +1,9 @@
 name: PR screenshots comment
 
-# Posts screenshots for PRs whose triggering workflow had a read-only token:
-# Dependabot and fork PRs. Same-repo PRs are commented directly by
-# `pr-screenshots.yml`, so they are excluded here to avoid double comments.
+# Posts screenshots for Dependabot PRs, whose triggering workflow only has a
+# read-only token. Same-repo human PRs are commented directly by
+# `pr-screenshots.yml`; fork PRs are not screenshotted at all (their capture job
+# is skipped), so this workflow is scoped to Dependabot only.
 #
 # Triggered via workflow_run so it executes from the default branch in the
 # trusted base context with a write token, and it never checks out PR code.
@@ -21,8 +22,7 @@ jobs:
     if: >
       github.event.workflow_run.event == 'pull_request' &&
       github.event.workflow_run.conclusion == 'success' &&
-      (github.event.workflow_run.actor.login == 'dependabot[bot]' ||
-       github.event.workflow_run.head_repository.full_name != github.repository)
+      github.event.workflow_run.actor.login == 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6

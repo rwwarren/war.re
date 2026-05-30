@@ -54,20 +54,23 @@ gh api -X PATCH repos/rwwarren/war.re/branches/main/protection \
 
 ## PR preview screenshots
 
-Every PR (including Dependabot) gets desktop + mobile screenshots of both apps'
-`/n` page posted as an auto-updating inline comment. Two workflows implement
-this. The commenting path depends on whether the PR's token can write:
+Same-repo PRs (the owner's branches and Dependabot) get desktop + mobile
+screenshots of both apps' `/n` page as an auto-updating inline comment. **Fork
+PRs are deliberately excluded** — their capture job is skipped, so untrusted
+fork code is never built or run by this automation. Two workflows implement it;
+the commenting path depends on whether the PR's token can write:
 
-- `pr-screenshots.yml` — runs on `pull_request`, builds both apps and captures
-  screenshots via `scripts/screenshot.mjs`. For **same-repo PRs** (the owner's
-  branches) the token is writable, so it publishes the inline comment directly
-  via `scripts/post-screenshots.sh` — including on the PR that first adds this
-  workflow. It also uploads the screenshots as an artifact.
-- `pr-screenshots-comment.yml` — handles **Dependabot and fork PRs**, whose
-  token in the workflow above is read-only. It runs on `workflow_run` from the
-  default branch (trusted base context, write token, never checks out PR code),
-  downloads the artifact, and posts the comment. Same-repo PRs are excluded so
-  no comment is posted twice.
+- `pr-screenshots.yml` — runs on `pull_request` for **same-repo PRs only**,
+  builds both apps and captures screenshots via `scripts/screenshot.mjs`. For
+  the owner's own branches the token is writable, so it publishes the inline
+  comment directly via `scripts/post-screenshots.sh` — including on the PR that
+  first adds this workflow. It also uploads the screenshots as an artifact.
+- `pr-screenshots-comment.yml` — handles **Dependabot PRs**, whose token in the
+  workflow above is read-only. It runs on `workflow_run` from the default branch
+  (trusted base context, write token, never checks out PR code), downloads the
+  artifact, and posts the comment. Human same-repo PRs are excluded here so no
+  comment is posted twice. As defense in depth it validates the artifact's PR
+  number and binds it to the built commit's SHA.
 
 Both paths share `scripts/post-screenshots.sh`, which commits the images to the
 orphan `pr-screenshots` branch and posts/updates a single sticky comment.

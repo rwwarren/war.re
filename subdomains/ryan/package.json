@@ -15,10 +15,10 @@
     "e2e": "playwright test"
   },
   "dependencies": {
-    "@types/node": "25.8.0",
-    "@types/react": "19.2.14",
+    "@types/node": "25.9.1",
+    "@types/react": "19.2.15",
     "@types/react-dom": "19.2.3",
-    "date-fns": "^4.1.0",
+    "date-fns": "^4.4.0",
     "eslint": "9.39.2",
     "eslint-config-next": "16.2.6",
     "next": "16.2.6",

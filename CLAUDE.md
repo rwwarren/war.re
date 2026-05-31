@@ -19,6 +19,7 @@ yarn lint       # ESLint
 yarn typecheck  # tsc --noEmit
 yarn format     # Prettier --write (format:check to verify)
 yarn test       # Jest — subdomains/ryan only
+yarn e2e        # Playwright UI smoke tests (run `yarn build` first)
 ```
 
 ## Structure

@@ -1,0 +1,61 @@
+name: PR screenshots comment
+
+# Posts screenshots for Dependabot PRs, whose triggering workflow only has a
+# read-only token. Same-repo human PRs are commented directly by
+# `pr-screenshots.yml`; fork PRs are not screenshotted at all (their capture job
+# is skipped), so this workflow is scoped to Dependabot only.
+#
+# Triggered via workflow_run so it executes from the default branch in the
+# trusted base context with a write token, and it never checks out PR code.
+
+on:
+  workflow_run:
+    workflows: ['PR screenshots']
+    types: [completed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  comment:
+    if: >
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.actor.login == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Download screenshot artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: pr-screenshots
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: screenshots
+
+      - name: Publish screenshots comment
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          set -euo pipefail
+          # pr-number.txt comes from the untrusted PR build (fork PRs control it),
+          # so validate it before using it to target a comment / branch dir.
+          PR=$(cat screenshots/pr-number.txt)
+          if ! printf '%s' "$PR" | grep -Eq '^[0-9]+$'; then
+            echo "::error::Invalid PR number in artifact: '${PR}'"
+            exit 1
+          fi
+          # Bind the claimed PR to the commit that was actually built: confirm the
+          # PR's head SHA matches this workflow_run's head SHA so a fork cannot
+          # redirect the screenshots to an unrelated PR.
+          HEAD_SHA=$(gh api "repos/${REPO}/pulls/${PR}" --jq '.head.sha')
+          if [ "$HEAD_SHA" != "$SHA" ]; then
+            echo "::error::PR #${PR} head (${HEAD_SHA}) does not match built commit (${SHA})"
+            exit 1
+          fi
+          export PR
+          bash scripts/post-screenshots.sh

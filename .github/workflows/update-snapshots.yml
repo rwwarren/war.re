@@ -1,0 +1,54 @@
+name: Update Playwright snapshots
+
+# Regenerates the visual regression baselines on Linux (same OS as CI) and
+# commits them back to the branch. Run this whenever the UI intentionally
+# changes and the old snapshots need to be replaced.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.ref }}
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+          cache: 'yarn'
+          cache-dependency-path: |
+            main/yarn.lock
+            subdomains/ryan/yarn.lock
+
+      - name: Install Playwright browser
+        working-directory: main
+        run: |
+          yarn install --frozen-lockfile
+          yarn playwright install --with-deps chromium
+
+      - name: Update main site snapshots
+        working-directory: main
+        run: |
+          yarn build
+          yarn e2e --update-snapshots
+
+      - name: Update ryan subdomain snapshots
+        working-directory: subdomains/ryan
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+          yarn e2e --update-snapshots
+
+      - name: Commit snapshots
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add main/e2e/__snapshots__ subdomains/ryan/e2e/__snapshots__
+          git diff --staged --quiet || git commit -m "test: update Playwright snapshots [skip ci]"
+          git push

@@ -7,4 +7,6 @@ const createJestConfig = nextJest({
 module.exports = createJestConfig({
   testEnvironment: 'jest-environment-jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  // Playwright specs live in e2e/ and run via `yarn e2e`, not Jest.
+  testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/e2e/'],
 })

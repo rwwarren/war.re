@@ -5,6 +5,7 @@ test.describe('war.re main site', () => {
     await page.goto('/n')
     await expect(page).toHaveTitle(/War\.re/)
     await expect(page.getByRole('heading', { level: 1, name: 'Ryan Warren' })).toBeVisible()
+    await expect(page).toHaveScreenshot('homepage.png', { fullPage: true })
   })
 
   test('root redirects visitors to the content route', async ({ page }) => {

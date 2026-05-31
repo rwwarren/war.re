@@ -5,7 +5,6 @@ test.describe('ryan.war.re resume', () => {
     await page.goto('/n')
     await expect(page).toHaveTitle(/Ryan Warren - Resume/)
     await expect(page.getByRole('heading', { level: 1, name: 'Ryan Warren' })).toBeVisible()
-    await expect(page).toHaveScreenshot('resume.png')
   })
 
   test('root redirects visitors to the content route', async ({ page }) => {

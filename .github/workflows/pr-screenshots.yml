@@ -58,7 +58,7 @@ jobs:
         run: echo "${{ github.event.pull_request.number }}" > "$GITHUB_WORKSPACE/screenshots/pr-number.txt"
 
       # For Dependabot / fork PRs the companion workflow posts the comment.
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: pr-screenshots
           path: screenshots/

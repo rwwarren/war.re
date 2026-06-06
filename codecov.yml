@@ -1,0 +1,32 @@
+# Coverage is only collected for subdomains/ryan (the only app with Jest tests).
+# main/ has no unit tests — it is covered by Playwright UI smoke tests in CI — so
+# it is ignored here to keep the coverage signal scoped to the tested app.
+coverage:
+  status:
+    project:
+      ryan:
+        target: auto
+        threshold: 1%
+        flags:
+          - ryan
+    patch:
+      default:
+        target: 90%
+        informational: true
+
+flags:
+  ryan:
+    paths:
+      - subdomains/ryan
+    carryforward: true
+
+comment:
+  layout: "reach, diff, flags, files"
+  require_changes: true
+
+ignore:
+  - "main/**"
+  - "**/*.test.*"
+  - "**/*.spec.*"
+  - "**/__tests__/**"
+  - "e2e/**"

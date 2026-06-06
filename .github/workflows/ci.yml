@@ -69,6 +69,12 @@ jobs:
           cache-dependency-path: subdomains/ryan/yarn.lock
       - run: yarn install --frozen-lockfile
       - run: yarn test:coverage --ci
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: subdomains/ryan/coverage/lcov.info
+          flags: ryan
       - run: yarn format:check
       - run: yarn lint
       - run: yarn typecheck

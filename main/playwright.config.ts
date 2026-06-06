@@ -14,6 +14,15 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
   reporter: process.env.CI ? [['list'], ['github']] : 'list',
+  // Allow a small per-pixel diff budget so anti-aliasing/font-hinting jitter
+  // between machines doesn't fail the visual snapshots. Regenerate baselines in
+  // the CI environment with the "Update Playwright snapshots" workflow.
+  expect: {
+    toHaveScreenshot: {
+      maxDiffPixelRatio: 0.02,
+      animations: 'disabled',
+    },
+  },
   use: {
     baseURL,
     trace: 'on-first-retry',

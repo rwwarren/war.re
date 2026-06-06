@@ -1,4 +1,5 @@
 .next/
 out/
+coverage/
 yarn.lock
 next-env.d.ts

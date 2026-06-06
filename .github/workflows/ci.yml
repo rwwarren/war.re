@@ -41,6 +41,7 @@ jobs:
           cache: 'yarn'
           cache-dependency-path: main/yarn.lock
       - run: yarn install --frozen-lockfile
+      - run: yarn test:coverage --ci
       - run: yarn format:check
       - run: yarn lint
       - run: yarn typecheck
@@ -66,7 +67,7 @@ jobs:
           cache: 'yarn'
           cache-dependency-path: subdomains/ryan/yarn.lock
       - run: yarn install --frozen-lockfile
-      - run: yarn test --ci
+      - run: yarn test:coverage --ci
       - run: yarn format:check
       - run: yarn lint
       - run: yarn typecheck

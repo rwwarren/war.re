@@ -216,7 +216,15 @@ export default function Home() {
           />
           <Experience heading={'Related Activities'} />
           <Activity
-            name={<a href="https://github.com/rwwarren/door-lock/">PiDuinoLock</a>}
+            name={
+              <a
+                href="https://github.com/rwwarren/door-lock/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                PiDuinoLock
+              </a>
+            }
             start={'July 2013'}
             end={'May 2017'}
             items={[

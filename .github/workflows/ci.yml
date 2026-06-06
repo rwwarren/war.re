@@ -5,6 +5,7 @@ on:
     branches: [main, 'claude/**']
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   changes:
@@ -41,6 +42,7 @@ jobs:
           cache: 'yarn'
           cache-dependency-path: main/yarn.lock
       - run: yarn install --frozen-lockfile
+      - run: yarn test:coverage --ci
       - run: yarn format:check
       - run: yarn lint
       - run: yarn typecheck
@@ -66,7 +68,7 @@ jobs:
           cache: 'yarn'
           cache-dependency-path: subdomains/ryan/yarn.lock
       - run: yarn install --frozen-lockfile
-      - run: yarn test --ci --coverage
+      - run: yarn test:coverage --ci
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
         with:

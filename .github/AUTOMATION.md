@@ -1,9 +1,19 @@
 # Code coverage
 
-`subdomains/ryan` runs Jest with `--coverage` in CI and uploads the report to
-Codecov (`ci.yml` → `Upload coverage to Codecov`, scoped to the `ryan` flag —
-see `codecov.yml`). `main/` has no unit tests and is excluded from coverage; it
-is exercised by the Playwright UI smoke tests instead.
+Coverage uploads to Codecov under per-source flags (see `codecov.yml`); each
+upload step lives in `ci.yml`:
+
+- **`ryan`** — `subdomains/ryan` runs Jest with `--coverage`, uploading
+  `coverage/lcov.info`.
+- **`main`** — `main/` runs Jest with `--coverage` (`yarn test:coverage`),
+  uploading `coverage/lcov.info`.
+- **`main-e2e`** — supplements the `main` unit coverage with Playwright V8
+  coverage of what the browser actually executes. `yarn e2e:coverage`
+  (`COVERAGE=1`) collects V8 coverage during the smoke run, maps it back to
+  source via `monocart-coverage-reports` (`main/e2e/fixtures.ts` +
+  `global-setup`/`global-teardown`), and writes `main/coverage/e2e/lcov.info`.
+  Source maps are emitted by `productionBrowserSourceMaps` in `next.config.js`;
+  the report is scoped to `pages/`/`components/`/`lib/` source files.
 
 ## One-time setup
 

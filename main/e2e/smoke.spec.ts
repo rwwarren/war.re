@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test'
+import { test, expect } from './fixtures'
 
 test.describe('war.re main site', () => {
   test('content route renders the homepage', async ({ page }) => {

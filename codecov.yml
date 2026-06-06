@@ -1,6 +1,8 @@
-# Coverage is only collected for subdomains/ryan (the only app with Jest tests).
-# main/ has no unit tests — it is covered by Playwright UI smoke tests in CI — so
-# it is ignored here to keep the coverage signal scoped to the tested app.
+# Coverage is collected per app and source, each under its own flag:
+#   - ryan:    Jest unit tests in subdomains/ryan
+#   - main:    Jest unit tests in main/
+#   - main-e2e: Playwright V8 coverage from main/'s UI smoke tests (what the
+#     browser actually executes, complementing the unit tests)
 coverage:
   status:
     project:
@@ -9,6 +11,16 @@ coverage:
         threshold: 1%
         flags:
           - ryan
+      main:
+        target: auto
+        threshold: 1%
+        flags:
+          - main
+      main-e2e:
+        target: auto
+        threshold: 1%
+        flags:
+          - main-e2e
     patch:
       default:
         target: 90%
@@ -19,13 +31,20 @@ flags:
     paths:
       - subdomains/ryan
     carryforward: true
+  main:
+    paths:
+      - main
+    carryforward: true
+  main-e2e:
+    paths:
+      - main
+    carryforward: true
 
 comment:
   layout: "reach, diff, flags, files"
   require_changes: true
 
 ignore:
-  - "main/**"
   - "**/*.test.*"
   - "**/*.spec.*"
   - "**/__tests__/**"

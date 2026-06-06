@@ -49,6 +49,6 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add main/e2e/__snapshots__ subdomains/ryan/e2e/__snapshots__
+          git add -A main/e2e/__snapshots__ subdomains/ryan/e2e/__snapshots__
           git diff --staged --quiet || git commit -m "test: update Playwright snapshots [skip ci]"
           git push

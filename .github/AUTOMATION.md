@@ -1,3 +1,18 @@
+# Code coverage
+
+`subdomains/ryan` runs Jest with `--coverage` in CI and uploads the report to
+Codecov (`ci.yml` → `Upload coverage to Codecov`, scoped to the `ryan` flag —
+see `codecov.yml`). `main/` has no unit tests and is excluded from coverage; it
+is exercised by the Playwright UI smoke tests instead.
+
+## One-time setup
+
+Add `CODECOV_TOKEN` to the repo secrets so the upload authenticates:
+`Settings → Secrets and variables → Actions → New repository secret`. Get the
+token from [codecov.io](https://codecov.io) after connecting this repo. The
+upload step does not fail CI if the token is missing, but coverage will not be
+reported until it is set.
+
 # Dependabot automation
 
 This repo fully automates dependency updates end to end:

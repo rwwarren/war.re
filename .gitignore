@@ -13,3 +13,4 @@ nohup.out
 **/playwright-report/
 **/test-results/
 **/.playwright/
+**/coverage/

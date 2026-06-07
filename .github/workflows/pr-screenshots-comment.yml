@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Download screenshot artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: pr-screenshots
           run-id: ${{ github.event.workflow_run.id }}

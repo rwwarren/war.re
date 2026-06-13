@@ -8,6 +8,7 @@ Next.js app served at [ryan.war.re](https://ryan.war.re).
 yarn install
 yarn dev      # localhost:3000
 yarn lint
+yarn typecheck
 yarn test
 yarn build
 ```

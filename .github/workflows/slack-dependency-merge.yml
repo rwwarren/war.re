@@ -1,0 +1,43 @@
+name: Slack notify on dependency merge
+
+# Posts to Slack when a dependency PR merges — covers Dependabot auto-merges
+# (minor/patch, via the dependencies label) and the resolutions auto-fix PR.
+#
+# Uses pull_request_target so the SLACK_WEBHOOK_URL secret is available even
+# for Dependabot-authored PRs (pull_request events get no secrets for those).
+#
+# Requirements (one-time):
+#   - Repo secret SLACK_WEBHOOK_URL: a Slack incoming webhook
+#     (https://api.slack.com/messaging/webhooks). The webhook is bound to the
+#     target channel, so no channel config lives here.
+
+on:
+  pull_request_target:
+    types: [closed]
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    if: >
+      github.event.pull_request.merged == true &&
+      (contains(github.event.pull_request.labels.*.name, 'dependencies') ||
+       startsWith(github.event.pull_request.head.ref, 'security/auto-resolutions'))
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post to Slack
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          PR_NUM: ${{ github.event.pull_request.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BASE: ${{ github.event.pull_request.base.ref }}
+        run: |
+          set -euo pipefail
+          payload=$(jq -n \
+            --arg url "$PR_URL" --arg num "$PR_NUM" \
+            --arg title "$PR_TITLE" --arg base "$PR_BASE" \
+            '{text: ":white_check_mark: Auto-merged <\($url)|#\($num) \($title)> → `\($base)`"}')
+          curl -fsS -X POST -H 'Content-Type: application/json' \
+            -d "$payload" "$SLACK_WEBHOOK_URL"

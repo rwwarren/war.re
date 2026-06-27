@@ -37,7 +37,7 @@
     "@types/pluralize": "^0.0.33",
     "jest": "^30.4.2",
     "jest-environment-jsdom": "^30.4.1",
-    "prettier": "^3.8.4",
+    "prettier": "^3.8.5",
     "serve": "^14.2.4"
   },
   "resolutions": {

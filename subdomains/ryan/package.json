@@ -16,13 +16,13 @@
     "e2e": "playwright test"
   },
   "dependencies": {
-    "@types/node": "26.0.1",
+    "@types/node": "26.1.0",
     "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
     "date-fns": "^4.4.0",
     "eslint": "9.39.2",
-    "eslint-config-next": "16.2.9",
-    "next": "16.2.9",
+    "eslint-config-next": "16.2.10",
+    "next": "16.2.10",
     "pluralize": "^8.0.0",
     "react": "19.2.7",
     "react-dom": "19.2.7",
@@ -37,7 +37,7 @@
     "@types/pluralize": "^0.0.33",
     "jest": "^30.4.2",
     "jest-environment-jsdom": "^30.4.1",
-    "prettier": "^3.8.5",
+    "prettier": "^3.9.4",
     "serve": "^14.2.4"
   },
   "resolutions": {

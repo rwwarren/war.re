@@ -44,7 +44,7 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn test:coverage --ci
       - name: Upload unit coverage to Codecov
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v7
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: main/coverage/lcov.info
@@ -58,7 +58,7 @@ jobs:
       - name: UI smoke tests
         run: yarn e2e:coverage
       - name: Upload e2e coverage to Codecov
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v7
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: main/coverage/e2e/lcov.info
@@ -82,7 +82,7 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn test:coverage --ci
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v7
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: subdomains/ryan/coverage/lcov.info

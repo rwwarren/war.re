@@ -22,7 +22,7 @@ export default function Home() {
           property="og:description"
           content="Seattle based Software Engineer currently working at Stripe"
         />
-        <meta property="og:image" content="https://war.re/og.svg" />
+        <meta property="og:image" content="https://war.re/og.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="War.re" />
@@ -49,11 +49,11 @@ export default function Home() {
             .
           </div>
           <div className={styles.info}>
-            I am currently working on random projects. Click{' '}
+            I am currently working on random projects. Check out{' '}
             <Link href="https://wrixton.xyz/" target="_blank" rel="noopener noreferrer">
-              here
+              wrixton.xyz
             </Link>{' '}
-            to check it out.
+            to see the latest.
           </div>
           <div className={styles.info}>
             If you would like to learn a little more, see my{' '}

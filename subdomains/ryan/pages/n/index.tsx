@@ -45,7 +45,7 @@ export default function Home() {
         />
         <meta property="profile:first_name" content="Ryan" />
         <meta property="profile:last_name" content="Warren" />
-        <meta property="og:image" content="https://ryan.war.re/og.svg" />
+        <meta property="og:image" content="https://ryan.war.re/og.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="War.re" />
@@ -71,7 +71,9 @@ export default function Home() {
               <span className={styles.dot} aria-hidden="true">
                 •
               </span>
-              <span data-nosnippet>ryan@war.re</span>
+              <a href="mailto:ryan@war.re" data-nosnippet>
+                ryan@war.re
+              </a>
               <span className={styles.dot} aria-hidden="true">
                 •
               </span>

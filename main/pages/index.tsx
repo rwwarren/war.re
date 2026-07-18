@@ -15,7 +15,7 @@ export default function Home() {
         <meta property="og:url" content="https://war.re/n" />
         <meta property="og:title" content="Ryan Warren - Software Engineer" />
         <meta property="og:description" content="Seattle based SDE @ Stripe" />
-        <meta property="og:image" content="https://war.re/og.svg" />
+        <meta property="og:image" content="https://war.re/og.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="War.re" />

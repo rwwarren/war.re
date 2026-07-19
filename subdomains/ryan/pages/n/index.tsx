@@ -71,9 +71,7 @@ export default function Home() {
               <span className={styles.dot} aria-hidden="true">
                 •
               </span>
-              <a href="mailto:ryan@war.re" data-nosnippet>
-                ryan@war.re
-              </a>
+              <span data-nosnippet>ryan@war.re</span>
               <span className={styles.dot} aria-hidden="true">
                 •
               </span>

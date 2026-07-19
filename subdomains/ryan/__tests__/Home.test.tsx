@@ -41,10 +41,12 @@ describe('ryan.war.re resume page', () => {
     )
   })
 
-  it('renders the email as a mailto link', () => {
-    const email = screen.getByRole('link', { name: 'ryan@war.re' })
-    expect(email).toHaveAttribute('href', 'mailto:ryan@war.re')
+  it('renders the email as plain text excluded from snippets', () => {
+    // The address is deliberately not a link (see commit "Remove email link
+    // and display as plain text") and is marked data-nosnippet for privacy.
+    const email = screen.getByText('ryan@war.re')
     expect(email).toHaveAttribute('data-nosnippet')
+    expect(screen.queryByRole('link', { name: 'ryan@war.re' })).not.toBeInTheDocument()
   })
 
   it('opens every external link safely (target + noopener)', () => {

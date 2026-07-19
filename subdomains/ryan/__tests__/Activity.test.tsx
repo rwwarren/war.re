@@ -3,51 +3,69 @@ import Activity from '../components/Activity'
 
 /**
  * `Activity` wraps the only real business logic in the codebase: `formatDuration`,
- * which is exercised here through the rendered `<h6>[…]</h6>` badge. The function
- * itself is module-private, so these tests pin its behaviour via the component.
+ * which is exercised here through the rendered `[…]` badge. The function itself
+ * is module-private, so these tests pin its behaviour via the component.
+ *
+ * Durations count months inclusively (LinkedIn-style): the end month itself is
+ * a worked month, so March 2021 - February 2024 is 3 years, not 2y 11m.
  */
 describe('Activity', () => {
-  const duration = () => screen.queryByRole('heading', { level: 6 })?.textContent ?? null
+  const duration = () => screen.queryByText(/^\[.+\]$/)?.textContent ?? null
 
   describe('duration formatting', () => {
-    it('renders years and months together', () => {
-      render(<Activity name="Engineer" start="January 2020" end="March 2022" items={[]} />)
-      expect(duration()).toBe('[2 Years 2 Months]')
-    })
-
-    it('combines a single year and single month using singular units', () => {
-      render(<Activity name="Engineer" start="January 2020" end="February 2021" items={[]} />)
-      expect(duration()).toBe('[1 Year 1 Month]')
-    })
-
-    it('pluralizes a year-only span', () => {
-      render(<Activity name="Engineer" start="January 2020" end="January 2023" items={[]} />)
+    it('counts the end month inclusively for a full stint', () => {
+      render(<Activity name="Engineer" start="March 2021" end="February 2024" items={[]} />)
       expect(duration()).toBe('[3 Years]')
     })
 
-    it('uses the singular for exactly one year', () => {
+    it('renders years and months together', () => {
+      render(<Activity name="Engineer" start="January 2020" end="March 2022" items={[]} />)
+      expect(duration()).toBe('[2 Years 3 Months]')
+    })
+
+    it('combines a single year and single month using singular units', () => {
       render(<Activity name="Engineer" start="January 2020" end="January 2021" items={[]} />)
+      expect(duration()).toBe('[1 Year 1 Month]')
+    })
+
+    it('uses the singular for exactly one year', () => {
+      render(<Activity name="Engineer" start="January 2020" end="December 2020" items={[]} />)
       expect(duration()).toBe('[1 Year]')
     })
 
     it('renders a months-only span when under a year', () => {
-      render(<Activity name="Engineer" start="January 2020" end="May 2020" items={[]} />)
+      render(<Activity name="Engineer" start="January 2020" end="April 2020" items={[]} />)
       expect(duration()).toBe('[4 Months]')
     })
 
-    it('uses the singular for exactly one month', () => {
-      render(<Activity name="Engineer" start="January 2020" end="February 2020" items={[]} />)
-      expect(duration()).toBe('[1 Month]')
-    })
-
-    it('omits the badge entirely for a zero-length span', () => {
-      // formatDuration returns '' (falsy), so the <h6> is never rendered.
+    it('counts a same-month span as one month', () => {
       render(<Activity name="Engineer" start="January 2020" end="January 2020" items={[]} />)
-      expect(screen.queryByRole('heading', { level: 6 })).not.toBeInTheDocument()
+      expect(duration()).toBe('[1 Month]')
     })
 
     it('omits the badge when no start date is provided', () => {
       render(<Activity name="Engineer" end="Graduated June 2015" items={[]} />)
+      expect(duration()).toBeNull()
+    })
+
+    it('omits the badge when the start date does not parse', () => {
+      render(<Activity name="Engineer" start="sometime in 2020" end="March 2022" items={[]} />)
+      expect(duration()).toBeNull()
+    })
+
+    it('omits the badge when the end date is neither a month nor "Present"', () => {
+      render(<Activity name="Engineer" start="January 2020" end="Graduated 2015" items={[]} />)
+      expect(duration()).toBeNull()
+    })
+
+    it('omits the badge for a reversed range', () => {
+      render(<Activity name="Engineer" start="March 2024" end="January 2024" items={[]} />)
+      expect(duration()).toBeNull()
+    })
+
+    it('is not rendered as a heading', () => {
+      // The badge is presentational; an <h6> under an <h3> breaks heading order.
+      render(<Activity name="Engineer" start="January 2020" end="March 2022" items={[]} />)
       expect(screen.queryByRole('heading', { level: 6 })).not.toBeInTheDocument()
     })
   })
@@ -61,14 +79,14 @@ describe('Activity', () => {
       jest.useRealTimers()
     })
 
-    it('measures the span up to the current date', () => {
+    it('measures the span up to and including the current month', () => {
       render(<Activity name="Engineer" start="March 2024" end="Present" items={[]} />)
-      expect(duration()).toBe('[3 Months]')
+      expect(duration()).toBe('[4 Months]')
     })
 
     it('treats "present" case-insensitively', () => {
       render(<Activity name="Engineer" start="March 2024" end="present" items={[]} />)
-      expect(duration()).toBe('[3 Months]')
+      expect(duration()).toBe('[4 Months]')
     })
   })
 

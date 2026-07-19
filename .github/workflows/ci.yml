@@ -94,7 +94,13 @@ jobs:
       - name: Install Playwright browser
         run: yarn playwright install --with-deps chromium
       - name: UI smoke tests
-        run: yarn e2e
+        run: yarn e2e:coverage
+      - name: Upload e2e coverage to Codecov
+        uses: codecov/codecov-action@v7
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: subdomains/ryan/coverage/e2e/lcov.info
+          flags: ryan-e2e
 
   ci-passed:
     name: CI Passed

@@ -10,6 +10,8 @@ const baseURL = `http://127.0.0.1:${PORT}`
  */
 export default defineConfig({
   testDir: './e2e',
+  globalSetup: './e2e/global-setup.ts',
+  globalTeardown: './e2e/global-teardown.ts',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
@@ -35,6 +37,13 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
+    },
+    // Runs the whole suite at a phone viewport (412px, under the 600px
+    // responsive breakpoint) with its own visual baseline. Pixel 7 stays on
+    // Chromium, the only browser installed in CI.
+    {
+      name: 'mobile',
+      use: { ...devices['Pixel 7'] },
     },
   ],
   webServer: {

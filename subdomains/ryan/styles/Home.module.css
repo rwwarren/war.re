@@ -25,6 +25,12 @@
   margin-bottom: 0.35em;
 }
 
+@media (prefers-color-scheme: dark) {
+  .main h2 {
+    border-bottom-color: #3a3f44;
+  }
+}
+
 .main h3 {
   font: 1.2em Verdana;
 }
@@ -88,9 +94,8 @@
   word-break: break-word;
 }
 
-.title h6 {
-  font-weight: normal;
-  display: inline;
+.title .duration {
+  font-size: 0.65em;
   white-space: nowrap;
 }
 
@@ -114,9 +119,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  .main {
-    font-size: 14px;
-  }
   .main h1 {
     font-size: 2em;
   }
@@ -135,5 +137,19 @@
     margin-left: 0;
     font-style: italic;
     opacity: 0.8;
+  }
+}
+
+@media print {
+  .main {
+    padding: 0;
+  }
+  .main h2 {
+    border-bottom-color: #000;
+  }
+  /* Keep each role/entry on one page when the resume is printed or saved
+     as a PDF. */
+  .activity {
+    break-inside: avoid;
   }
 }

@@ -47,9 +47,30 @@
 }
 
 .images {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
   padding-top: 0.5em;
+  /* Cancel the first link's tap-target padding so the icons stay visually
+     aligned with the text above. */
+  margin-left: -7px;
 }
 
-.images img {
-  margin-right: 15px;
+/* 30px icon + 7px padding per side = 44px minimum tap target. */
+.images a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* The social icons are dark glyphs with no fill of their own. */
+  .images img {
+    filter: invert(1);
+  }
+
+  .info a:hover {
+    color: #a8a8a8;
+  }
 }

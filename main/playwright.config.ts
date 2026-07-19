@@ -38,6 +38,13 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
+    // Runs the whole suite at a phone viewport (412px, under the responsive
+    // breakpoints) with its own visual baseline. Pixel 7 stays on Chromium,
+    // the only browser installed in CI.
+    {
+      name: 'mobile',
+      use: { ...devices['Pixel 7'] },
+    },
   ],
   webServer: {
     command: `npx serve out --no-clipboard --no-request-logging -l ${PORT}`,

@@ -23,11 +23,11 @@
     "@vercel/analytics": "^2.0.1",
     "date-fns": "^4.4.0",
     "eslint": "9.39.2",
-    "eslint-config-next": "16.2.10",
-    "next": "16.2.10",
+    "eslint-config-next": "16.2.11",
+    "next": "16.2.11",
     "pluralize": "^8.0.0",
-    "react": "19.2.7",
-    "react-dom": "19.2.7",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
     "typescript": "6.0.3"
   },
   "devDependencies": {
@@ -41,7 +41,7 @@
     "jest": "^30.4.2",
     "jest-environment-jsdom": "^30.4.1",
     "monocart-coverage-reports": "^2.12.12",
-    "prettier": "^3.9.5",
+    "prettier": "^3.9.6",
     "serve": "^14.2.4"
   },
   "resolutions": {

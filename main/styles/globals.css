@@ -40,7 +40,9 @@ a:focus-visible {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    background-image: none;
+    /* Same staircase tile with the contrast flipped: #121212 base, #272727
+       steps. The light tile is opaque, so it can't be reused here. */
+    background-image: url(/small_steps_dark.png);
     background-color: #121212;
     color: #e8e8e8;
   }

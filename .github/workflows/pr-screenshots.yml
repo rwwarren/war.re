@@ -9,6 +9,9 @@ name: PR screenshots
 
 on:
   pull_request:
+    # Include ready_for_review so marking a draft ready re-triggers the capture
+    # (the draft gate below skips it while the PR is a draft).
+    types: [opened, synchronize, reopened, ready_for_review]
 
 permissions:
   contents: write
@@ -18,8 +21,11 @@ jobs:
   capture:
     # Same-repo PRs only (this includes Dependabot, whose branches live in the
     # repo). Fork PRs are skipped entirely, so untrusted fork code is never
-    # built or run by this automation.
-    if: github.event.pull_request.head.repo.full_name == github.repository
+    # built or run by this automation. Also skip drafts — screenshots are a
+    # review aid, so capturing them on every draft push just burns CI hours.
+    if: >
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7

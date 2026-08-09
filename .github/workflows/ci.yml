@@ -43,7 +43,7 @@ jobs:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v6
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'yarn'
           cache-dependency-path: main/yarn.lock
       - run: yarn install --frozen-lockfile
@@ -81,7 +81,7 @@ jobs:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v6
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'yarn'
           cache-dependency-path: subdomains/ryan/yarn.lock
       - run: yarn install --frozen-lockfile

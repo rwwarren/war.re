@@ -2,12 +2,15 @@
   position: fixed;
   top: 0.75rem;
   right: 0.75rem;
-  display: inline-flex;
-  gap: 0.15rem;
   padding: 0.2rem;
   border-radius: 999px;
   background: rgba(127, 127, 127, 0.15);
   z-index: 10;
+}
+
+.group {
+  display: inline-flex;
+  gap: 0.15rem;
 }
 
 .toggle button {

@@ -34,19 +34,24 @@ export default function ThemeToggle() {
   }
 
   return (
-    <div className={styles.toggle} role="radiogroup" aria-label="Color theme">
-      {OPTIONS.map((option) => (
-        <button
-          key={option.value}
-          type="button"
-          role="radio"
-          aria-checked={theme === option.value}
-          className={theme === option.value ? styles.active : undefined}
-          onClick={() => choose(option.value)}
-        >
-          {option.label}
-        </button>
-      ))}
+    // A fixed-position control sitting outside the page's <main> needs its
+    // own landmark, or axe's "region" check flags it as content unreachable
+    // via landmark navigation — hence the wrapping role="region".
+    <div className={styles.toggle} role="region" aria-label="Theme">
+      <div className={styles.group} role="radiogroup" aria-label="Color theme">
+        {OPTIONS.map((option) => (
+          <button
+            key={option.value}
+            type="button"
+            role="radio"
+            aria-checked={theme === option.value}
+            className={theme === option.value ? styles.active : undefined}
+            onClick={() => choose(option.value)}
+          >
+            {option.label}
+          </button>
+        ))}
+      </div>
     </div>
   )
 }

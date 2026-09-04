@@ -66,11 +66,19 @@
 
 @media (prefers-color-scheme: dark) {
   /* The social icons are dark glyphs with no fill of their own. */
-  .images img {
+  :root:not([data-theme='light']) .images img {
     filter: invert(1);
   }
 
-  .info a:hover {
+  :root:not([data-theme='light']) .info a:hover {
     color: #a8a8a8;
   }
+}
+
+:root[data-theme='dark'] .images img {
+  filter: invert(1);
+}
+
+:root[data-theme='dark'] .info a:hover {
+  color: #a8a8a8;
 }

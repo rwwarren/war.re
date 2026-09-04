@@ -4,6 +4,7 @@ import Experience from '../../components/Experience'
 import Activity from '../../components/Activity'
 import ActivityList from '@/components/ActivityList'
 import ExperienceItem, { type ExperienceItemProps } from '@/components/ExperienceItem'
+import ThemeToggle from '@/components/ThemeToggle'
 
 export default function Home() {
   const technologies: ExperienceItemProps[] = [
@@ -59,6 +60,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <ThemeToggle />
       <main className={styles.main}>
         <div className={styles.content}>
           <div className={styles.header}>

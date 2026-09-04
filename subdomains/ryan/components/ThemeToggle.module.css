@@ -1,0 +1,46 @@
+.toggle {
+  position: fixed;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.2rem;
+  border-radius: 999px;
+  background: rgba(127, 127, 127, 0.15);
+  z-index: 10;
+}
+
+.group {
+  display: inline-flex;
+  gap: 0.15rem;
+}
+
+.toggle button {
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 0.7rem;
+  line-height: 1;
+  padding: 0.4rem 0.55rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.toggle button:hover {
+  background: rgba(127, 127, 127, 0.25);
+}
+
+.toggle .active {
+  background: rgba(127, 127, 127, 0.4);
+  font-weight: bold;
+}
+
+.toggle button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+@media print {
+  .toggle {
+    display: none;
+  }
+}

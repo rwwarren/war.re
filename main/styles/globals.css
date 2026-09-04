@@ -39,11 +39,19 @@ a:focus-visible {
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    /* Same staircase tile with the contrast flipped: #121212 base, #272727
-       steps. The light tile is opaque, so it can't be reused here. */
+  /* Same staircase tile with the contrast flipped: #121212 base, #272727
+     steps. The light tile is opaque, so it can't be reused here. An
+     explicit "light" choice (data-theme) overrides the system preference. */
+  :root:not([data-theme='light']) {
     background-image: url(/small_steps_dark.png);
     background-color: #121212;
     color: #e8e8e8;
   }
+}
+
+/* Explicit "dark" choice wins even when the system prefers light. */
+:root[data-theme='dark'] {
+  background-image: url(/small_steps_dark.png);
+  background-color: #121212;
+  color: #e8e8e8;
 }

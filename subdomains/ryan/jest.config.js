@@ -10,10 +10,11 @@ module.exports = createJestConfig({
   // Playwright specs live in e2e/ and run via `yarn e2e`, not Jest.
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/e2e/'],
   coverageReporters: ['text', 'lcov'],
-  // Coverage is gated on components/, where the unit tests live. The `pages/`
-  // tree is verified end-to-end by the Playwright smoke tests (`yarn e2e`), so
-  // including it in the Jest coverage gate would misrepresent what Jest checks.
-  collectCoverageFrom: ['components/**/*.{ts,tsx}'],
+  // Coverage is gated on components/, lib/, and the content page (`pages/n`)
+  // — the units with body markup or logic worth unit testing. The redirect
+  // shell, 404 page, and Next internals are covered end-to-end instead
+  // (`yarn e2e`), so including them here would misrepresent what Jest checks.
+  collectCoverageFrom: ['components/**/*.{ts,tsx}', 'lib/**/*.ts', 'pages/n/**/*.{ts,tsx}'],
   coverageThreshold: {
     global: {
       statements: 90,

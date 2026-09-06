@@ -33,6 +33,32 @@ describe('war.re content page', () => {
     expect(screen.getByAltText('Stack Overflow link')).toBeInTheDocument()
   })
 
+  it('links each social icon to the right profile', () => {
+    expect(screen.getByRole('link', { name: 'Github link' })).toHaveAttribute(
+      'href',
+      'https://github.com/rwwarren'
+    )
+    expect(screen.getByRole('link', { name: 'Linkedin link' })).toHaveAttribute(
+      'href',
+      'https://linkedin.com/in/ryanwwarren'
+    )
+    expect(screen.getByRole('link', { name: 'Stack Overflow link' })).toHaveAttribute(
+      'href',
+      'http://stackoverflow.com/users/1879792/ryan-warren'
+    )
+  })
+
+  it('links Stripe and wrixton.xyz in the body copy', () => {
+    expect(screen.getByRole('link', { name: 'Stripe' })).toHaveAttribute(
+      'href',
+      'https://stripe.com/'
+    )
+    expect(screen.getByRole('link', { name: 'wrixton.xyz' })).toHaveAttribute(
+      'href',
+      'https://wrixton.xyz/'
+    )
+  })
+
   it('renders a footer with the current year', () => {
     const year = new Date().getFullYear()
     expect(screen.getByText(new RegExp(`©\\s*${year}\\s*war\\.re`))).toBeInTheDocument()

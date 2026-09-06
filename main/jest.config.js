@@ -9,13 +9,12 @@ module.exports = createJestConfig({
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   // Playwright specs live in e2e/ and run via `yarn e2e`, not Jest.
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/e2e/'],
-  // Every source .ts/.tsx file is covered except: generated/tooling files
-  // (type declarations, Playwright's own config and specs) and
-  // `pages/_document.tsx` and `pages/index.tsx`, which have no meaningful
-  // jsdom render — `_document`'s `<Html>` throws outside Next's real
-  // document render, and the redirect shell's only body content is a
-  // `<noscript>` link that jsdom (like a real browser with JS enabled)
-  // renders empty. Both are covered end-to-end instead (`yarn e2e`).
+  // Every source .ts/.tsx file is covered except generated/tooling files
+  // (type declarations, Playwright's own config and specs) — never app code
+  // to test. `_document.tsx` and `pages/index.tsx` can't be *rendered* under
+  // jsdom (see Document.test.tsx and RootRedirect.test.tsx for why), so
+  // their specs assert on the returned element tree instead; end-to-end
+  // (`yarn e2e`) still covers the real browser behavior.
   collectCoverageFrom: [
     '**/*.{ts,tsx}',
     '!**/*.d.ts',
@@ -23,8 +22,6 @@ module.exports = createJestConfig({
     '!out/**',
     '!e2e/**',
     '!playwright.config.ts',
-    '!pages/_document.tsx',
-    '!pages/index.tsx',
   ],
   coverageThreshold: {
     global: {

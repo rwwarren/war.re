@@ -30,6 +30,10 @@ function formatDuration(start: string, end: string): string | null {
     parts.push(`${interval.years} ${pluralize('Year', interval.years)}`)
   if (interval.months && interval.months > 0)
     parts.push(`${interval.months} ${pluralize('Month', interval.months)}`)
+  // parts is never empty here: startDate <= endDate is already guaranteed
+  // above, and the +1 month in the interval means even a same-month span
+  // counts as 1 month. Kept as a defensive fallback rather than assumed away.
+  /* istanbul ignore next */
   return parts.length > 0 ? parts.join(' ') : null
 }
 

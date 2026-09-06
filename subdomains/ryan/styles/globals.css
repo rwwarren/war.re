@@ -18,18 +18,34 @@ a:focus-visible {
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
+  /* An explicit "light" choice (data-theme) overrides the system
+     preference. */
+  :root:not([data-theme='light']) body {
     background-color: #16181a;
     color: #dfe3e6;
   }
 
-  a {
+  :root:not([data-theme='light']) a {
     color: #8ab4f8;
   }
 
-  a:visited {
+  :root:not([data-theme='light']) a:visited {
     color: #b8a7e8;
   }
+}
+
+/* Explicit "dark" choice wins even when the system prefers light. */
+:root[data-theme='dark'] body {
+  background-color: #16181a;
+  color: #dfe3e6;
+}
+
+:root[data-theme='dark'] a {
+  color: #8ab4f8;
+}
+
+:root[data-theme='dark'] a:visited {
+  color: #b8a7e8;
 }
 
 @media print {

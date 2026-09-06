@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
+import ThemeToggle from '@/components/ThemeToggle'
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
         <meta name="author" content="Ryan Warren" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <ThemeToggle />
       <main className={styles.main}>
         <div className={styles.center}>
           <h1>Ryan Warren</h1>

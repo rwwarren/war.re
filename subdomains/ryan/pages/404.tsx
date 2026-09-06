@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from '@/styles/Home.module.css'
+import ThemeToggle from '@/components/ThemeToggle'
 
 export default function NotFound() {
   return (
@@ -9,6 +10,7 @@ export default function NotFound() {
         <title>404 — Ryan Warren</title>
         <meta name="robots" content="noindex" />
       </Head>
+      <ThemeToggle />
       <main className={styles.main}>
         <div className={styles.center}>
           <h1>404</h1>

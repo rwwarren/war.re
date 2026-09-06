@@ -50,6 +50,19 @@ describe('ThemeToggle', () => {
     expect(window.localStorage.getItem('theme')).toBeNull()
   })
 
+  it('picks up a preference changed in another tab via the storage event', () => {
+    render(<ThemeToggle />)
+    expect(screen.getByRole('radio', { name: 'System' })).toHaveAttribute('aria-checked', 'true')
+
+    // Simulate another tab writing the preference directly (no local click),
+    // then firing the native `storage` event this tab listens for.
+    window.localStorage.setItem('theme', 'dark')
+    fireEvent(window, new Event('storage'))
+
+    expect(screen.getByRole('radio', { name: 'Dark' })).toHaveAttribute('aria-checked', 'true')
+    expect(document.documentElement).toHaveAttribute('data-theme', 'dark')
+  })
+
   describe('scroll visibility', () => {
     // Grab the region once, before it might become inert, and keep reusing
     // that reference — an inert element may no longer match role queries.

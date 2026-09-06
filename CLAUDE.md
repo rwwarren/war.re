@@ -18,7 +18,7 @@ yarn build      # static export to out/
 yarn lint       # ESLint
 yarn typecheck  # tsc --noEmit
 yarn format     # Prettier --write (format:check to verify)
-yarn test       # Jest — subdomains/ryan only
+yarn test       # Jest
 yarn e2e        # Playwright UI smoke tests (run `yarn build` first)
 ```
 
@@ -34,6 +34,6 @@ yarn e2e        # Playwright UI smoke tests (run `yarn build` first)
 - Custom `_app.tsx` and `_document.tsx` wrappers
 - Path alias `@/*` maps to project root
 - React Strict Mode enabled
-- Tests: `subdomains/ryan/` uses Jest + React Testing Library; `main/` has none
+- Tests: both apps use Jest + React Testing Library (`yarn test`), plus Playwright smoke tests (`yarn e2e`)
 
 See `~/CLAUDE.md` for global conventions.

@@ -17,9 +17,9 @@
     "e2e:coverage": "COVERAGE=1 playwright test"
   },
   "dependencies": {
-    "@types/node": "26.4.0",
+    "@types/node": "26.5.0",
     "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.5",
+    "@types/react-dom": "19.2.7",
     "@vercel/analytics": "^2.0.1",
     "date-fns": "^4.4.0",
     "eslint": "9.39.2",
@@ -32,14 +32,14 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
-    "@playwright/test": "^1.62.1",
+    "@playwright/test": "^1.63.0",
     "@testing-library/dom": "^10.0.0",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
     "@types/jest": "^30.0.0",
     "@types/pluralize": "^0.0.33",
-    "jest": "^30.5.0",
-    "jest-environment-jsdom": "^30.5.0",
+    "jest": "^30.5.1",
+    "jest-environment-jsdom": "^30.5.1",
     "monocart-coverage-reports": "^2.13.0",
     "prettier": "^3.9.6",
     "serve": "^14.2.4"

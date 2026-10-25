@@ -4,6 +4,29 @@ import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
 import ThemeToggle from '@/components/ThemeToggle'
 
+// Person structured data so search engines can surface the profile details
+// (name, role, employer, profiles) as a knowledge panel rather than guessing
+// them from the page copy.
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Ryan Warren',
+  jobTitle: 'Software Engineer',
+  url: 'https://war.re/n',
+  image: 'https://war.re/og.png',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Stripe',
+    url: 'https://stripe.com/',
+  },
+  sameAs: [
+    'https://github.com/rwwarren',
+    'https://linkedin.com/in/ryanwwarren',
+    'http://stackoverflow.com/users/1879792/ryan-warren',
+    'https://wrixton.xyz/',
+  ],
+}
+
 export default function Home() {
   return (
     <>
@@ -11,7 +34,7 @@ export default function Home() {
         <title>War.re - Ryan Warren</title>
         <meta
           name="description"
-          content="Ryan Warren - Seattle based Software Engineer currently working at Stripe"
+          content="Ryan Warren, a Seattle-based software engineer at Stripe. Projects, links, and resume."
         />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
@@ -21,20 +44,27 @@ export default function Home() {
         <meta property="og:title" content="Ryan Warren - Software Engineer" />
         <meta
           property="og:description"
-          content="Seattle based Software Engineer currently working at Stripe"
+          content="Ryan Warren, a Seattle-based software engineer at Stripe."
         />
         <meta property="og:image" content="https://war.re/og.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Ryan Warren, software engineer - war.re" />
         <meta property="og:site_name" content="War.re" />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Ryan Warren - Software Engineer" />
         <meta
           name="twitter:description"
-          content="Seattle based Software Engineer currently working at Stripe"
+          content="Ryan Warren, a Seattle-based software engineer at Stripe."
         />
+        <meta name="twitter:image" content="https://war.re/og.png" />
+        <meta name="twitter:image:alt" content="Ryan Warren, software engineer - war.re" />
         <meta name="author" content="Ryan Warren" />
         <link rel="icon" href="/favicon.ico" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
       </Head>
       <ThemeToggle />
       <main className={styles.main}>

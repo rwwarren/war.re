@@ -18,10 +18,13 @@ export default function Home() {
         <meta property="og:image" content="https://war.re/og.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Ryan Warren, software engineer - war.re" />
         <meta property="og:site_name" content="War.re" />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Ryan Warren - Software Engineer" />
-        <meta name="twitter:description" content="Seattle based SDE @ Stripe" />
+        <meta name="twitter:description" content="Seattle-based software engineer at Stripe" />
+        <meta name="twitter:image" content="https://war.re/og.png" />
+        <meta name="twitter:image:alt" content="Ryan Warren, software engineer - war.re" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <noscript>

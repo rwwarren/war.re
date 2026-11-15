@@ -104,6 +104,10 @@ closes, so it does not accumulate old screenshots.
 
 ### Keeping Vercel and branches tidy
 
+- Each app is its own Vercel project, and a push used to build both. The
+  `ignoreCommand` in each `vercel.json` skips the build when nothing under that
+  app's directory has changed since the branch's last successful deployment
+  (`VERCEL_GIT_PREVIOUS_SHA`). A branch's first push always builds.
 - The `pr-screenshots` branch holds no app, so Vercel must not try to deploy it.
   `git.deploymentEnabled` in `main/vercel.json` and `subdomains/ryan/vercel.json`
   disables that branch for both Vercel projects, and `post-screenshots.sh` writes
